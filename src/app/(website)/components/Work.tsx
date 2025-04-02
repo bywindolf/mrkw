@@ -1,5 +1,4 @@
-//Component: Card
-// Thinkig of making this Card "smart" for using with Experince maybe
+//Component: Work
 
 import React from "react";
 import Card from "./Card";
@@ -28,7 +27,7 @@ export default function Work() {
       <div className="work__container container">
         <ul className="work__list">
           {cardData.map((item) => (
-            <Card key={item.id} item={item} />
+            <Card key={item.id} item={item} className="work__list-item" />
           ))}
         </ul>
       </div>
