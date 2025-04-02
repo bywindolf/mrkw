@@ -6,25 +6,21 @@ import "@fontsource/playfair-display";
 import "@fontsource/jetbrains-mono";
 
 export const metadata: Metadata = {
-    title: "FireCMS E-commerce",
-    description: "This is a demo for using FireCMS as an e-commerce backend",
+  title: "FireCMS E-commerce",
+  description: "This is a demo for using FireCMS as an e-commerce backend",
 };
 
-
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
-    children: React.ReactNode;
+  children,
+}: Readonly<{
+  children: React.ReactNode;
 }>) {
-
-    return (
-        <html lang="en">
-        <body>
-
+  return (
+    <html lang="en">
+      <body>
+        <h1>test</h1>
         {children}
-
-        </body>
-        </html>
-    );
+      </body>
+    </html>
+  );
 }
-
