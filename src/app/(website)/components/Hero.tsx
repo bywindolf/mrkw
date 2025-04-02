@@ -3,5 +3,5 @@
 import React, { PropsWithChildren } from "react";
 
 export default function Hero({ children }: PropsWithChildren) {
-  return <div className="hero">{children}</div>;
+  return <section className="hero">{children}</section>;
 }
