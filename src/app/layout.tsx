@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <h1>test</h1>
-        <Main>{children}</Main>
+        {children}
       </body>
     </html>
   );
