@@ -1,11 +1,12 @@
 import React from "react";
+import MenuItem from "./MenuItem";
 
 export default function MainMenu() {
   return (
     <div className={"main-menu"}>
       <ul>
-        <li>Menu item</li>
-        <li>Menut item 2</li>
+        <MenuItem url="/">sds</MenuItem>
+        <MenuItem url="/">sds</MenuItem>
       </ul>
     </div>
   );

@@ -2,13 +2,14 @@ import Link from "next/link";
 import React from "react";
 
 type MenuItemProps = {
+  children?: React.ReactNode;
   url: string;
 };
 
-export default function MenuItem({ url }: MenuItemProps) {
+export default function MenuItem({ url, children }: MenuItemProps) {
   return (
     <li>
-      <Link href={url}>MenuItem</Link>
+      <Link href={url}>{children}</Link>
     </li>
   );
 }
