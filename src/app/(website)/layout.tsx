@@ -6,6 +6,7 @@ import NextTopLoader from "nextjs-toploader";
 import { Providers } from "./Providers";
 import { Header } from "@/app/(website)/components/Header";
 import { Footer } from "@/app/(website)/components/Footer";
+import Main from "./components/Main";
 
 export const metadata: Metadata = {
   title: "FireCMS e-commerce and blog demo",
@@ -21,15 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <NextTopLoader color={"#16D6D1"} />
-
-        <main className={"relative w-full min-h-[100dvh] flex flex-col"}>
-          <Header />
-
-          <Providers>{children}</Providers>
-
-          <Footer />
-        </main>
+        <Header />
+        <Providers>{children}</Providers>
+        <Footer />
       </body>
     </html>
   );
