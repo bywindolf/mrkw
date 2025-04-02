@@ -1,5 +1,7 @@
-import React from "react";
+//Component: Hero
 
-export default function Hero() {
-  return <div className="hero">Hero</div>;
+import React, { PropsWithChildren } from "react";
+
+export default function Hero({ children }: PropsWithChildren) {
+  return <div className="hero">{children}</div>;
 }
