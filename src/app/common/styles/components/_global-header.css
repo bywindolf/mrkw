@@ -1,0 +1,24 @@
+@layer components {
+  .global-header {
+    @apply p-8 z-1 fixed w-full bg-white opacity-90;
+  }
+  .global-header__container {
+    @apply flex justify-between gap-4 items-center;
+  }
+  .global-header__logo {
+    @apply flex items-center text-2xl text-nowrap gap-2 flex-wrap;
+  }
+  .global-header__text {
+    @apply text-wrap;
+  }
+  .global-header__actions {
+    @apply z-20 flex gap-4;
+  }
+  /* Logic for toggle .main-menu */
+  .global-header__container:has(
+      .global-header__actions .toggle-menu-button[data-toggle="false"]
+    )
+    .main-menu {
+    @apply hidden desktop:block;
+  }
+}

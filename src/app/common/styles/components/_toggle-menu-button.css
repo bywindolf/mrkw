@@ -1,0 +1,11 @@
+@layer components {
+  .toggle-menu-button {
+    @apply desktop:hidden;
+  }
+  .toggle-menu-button[data-toggle="false"] {
+    @apply bg-amber-700 /* Show the button when data-toggle="true" */;
+  }
+  .toggle-menu-button[data-toggle="true"] {
+    @apply bg-green-300; /* Show the button when data-toggle="true" */
+  }
+}

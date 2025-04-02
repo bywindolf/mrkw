@@ -1,0 +1,33 @@
+@layer components {
+  .logo__image {
+    @apply bg-white w-6 h-6 md:w-8 sm:h-8;
+  }
+  .main {
+    @apply bg-gray-100 flex flex-col text-gray-800  pt-24 px-8 pb-24;
+  }
+
+  .hero {
+    @apply flex flex-col items-center justify-center bg-gray-200  p-8 gap-2 aspect-[16/6];
+  }
+
+  .button {
+    @apply flex gap-2 px-4 py-2 border-2 items-center bg-primary cursor-pointer hover:bg-purple-400 rounded-2xl;
+  }
+
+  .container {
+    @apply mx-auto max-w-4xl;
+  }
+
+  .header {
+    @apply w-full flex items-center justify-center py-16;
+    h1 {
+      @apply text-black text-3xl font-sans;
+    }
+  }
+  .sub-headline {
+    @apply py-16 flex justify-center;
+  }
+  .button-wrapper {
+    @apply flex gap-2;
+  }
+}

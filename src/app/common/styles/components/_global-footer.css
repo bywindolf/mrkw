@@ -1,0 +1,11 @@
+@layer components {
+  .global-footer {
+    @apply bg-zinc-400 text-white p-8;
+  }
+  .global-footer__logo {
+  }
+
+  .global-footer__container {
+    @apply grid grid-cols-4 gap-16;
+  }
+}
