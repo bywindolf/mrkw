@@ -8,10 +8,10 @@ import { Header } from "./(website)/components/Header";
 import { Footer } from "./(website)/components/Footer";
 
 export const metadata: Metadata = {
-  title: "FireCMS E-commerce",
-  description: "This is a demo for using FireCMS as an e-commerce backend",
+  title: "MRKW – Now it's personal",
+  description: "A portfolio site of Kristoffer Windolf",
+  generator: "...",
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
