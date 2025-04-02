@@ -27,7 +27,9 @@ export default function Work() {
       <div className="work__container container">
         <ul className="work__list">
           {cardData.map((item) => (
-            <Card key={item.id} item={item} className="work__list-item" />
+            <li key={item.id} className="work__list-item">
+              <Card item={item} />
+            </li>
           ))}
         </ul>
       </div>

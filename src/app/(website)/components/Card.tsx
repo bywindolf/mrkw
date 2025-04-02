@@ -9,5 +9,10 @@ type CardProps = {
 };
 
 export default function Card({ item, className }: CardProps) {
-  return <li className={`card ${className}`}>{item.title}</li>;
+  return (
+    <li className={`card ${className}`}>
+      {item.title}
+      <p>{item.description}</p>
+    </li>
+  );
 }
