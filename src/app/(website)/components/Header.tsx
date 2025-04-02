@@ -7,5 +7,5 @@ import Link from "next/link";
 import { HeaderLink } from "@/app/(website)/components/HeaderLink";
 
 export function Header() {
-  return <div className={"header"}></div>;
+  return <div className={"header"}>Header</div>;
 }
