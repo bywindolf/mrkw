@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Card() {
-  return <>Card</>;
+  return <li>Card</li>;
 }
