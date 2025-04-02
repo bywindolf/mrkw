@@ -6,9 +6,11 @@ export default function MainMenu() {
     <div className={"main-menu"}>
       <ul className="main-menu__list">
         <MenuItem className="main-menu__list" url="/">
-          Hej
+          Home
         </MenuItem>
-        <MenuItem url="/">då</MenuItem>
+        <MenuItem className="main-menu__list" url="/test">
+          Test
+        </MenuItem>
       </ul>
     </div>
   );
