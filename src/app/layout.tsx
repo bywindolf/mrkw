@@ -4,6 +4,7 @@ import "@/app/common/index.css";
 import "@fontsource/poppins";
 import "@fontsource/playfair-display";
 import "@fontsource/jetbrains-mono";
+import Main from "./(website)/components/Main";
 
 export const metadata: Metadata = {
   title: "FireCMS E-commerce",
@@ -19,7 +20,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <h1>test</h1>
-        {children}
+        <Main>
+          <h1>s</h1>
+        </Main>
       </body>
     </html>
   );
