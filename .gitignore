@@ -1,0 +1,31 @@
+# Node modules
+node_modules/
+
+# Firebase/FireCMS configuration files (local)
+firebase.json
+firestore.indexes.json
+firestore.rules
+
+# Build output
+build/
+dist/
+
+# Logs
+logs/
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (if using VS Code)
+.vscode/
+
+# Temporary files
+*.swp
+*.swo
+
+# Environment files (never commit sensitive information)
+.env
+.env.local
+.env.*.local
