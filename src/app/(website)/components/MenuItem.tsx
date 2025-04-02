@@ -3,12 +3,13 @@ import React from "react";
 
 type MenuItemProps = {
   children?: React.ReactNode;
+  className: string;
   url: string;
 };
 
-export default function MenuItem({ url, children }: MenuItemProps) {
+export default function MenuItem({ url, children, className }: MenuItemProps) {
   return (
-    <li>
+    <li className={className}>
       <Link href={url}>{children}</Link>
     </li>
   );
