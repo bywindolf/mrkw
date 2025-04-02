@@ -1,4 +1,5 @@
 import Hero from "./(website)/components/Hero";
+import Main from "./(website)/components/Main";
 
 export default function Home() {
   return (
@@ -6,6 +7,7 @@ export default function Home() {
       <Hero>
         <h1>Hello hero</h1>
       </Hero>
+      <Main>sds</Main>
     </>
   );
 }
