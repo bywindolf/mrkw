@@ -1,5 +1,5 @@
 import React, { PropsWithChildren } from "react";
 
-export default function SubHeadline({ children }: PropsWithChildren) {
-  return <h2>SubHeadline</h2>;
+export default function PageSubHeadline({ children }: PropsWithChildren) {
+  return <h2 className={"page-sub-headline"}>{children}</h2>;
 }
