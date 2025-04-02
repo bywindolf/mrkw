@@ -3,7 +3,7 @@ import MenuItem from "./MenuItem";
 
 export default function MainMenu() {
   return (
-    <div className={"main-menu"}>
+    <nav className={"main-menu"}>
       <ul className="main-menu__list">
         <MenuItem className="main-menu__list" url="/">
           Home
@@ -12,6 +12,6 @@ export default function MainMenu() {
           Test
         </MenuItem>
       </ul>
-    </div>
+    </nav>
   );
 }
