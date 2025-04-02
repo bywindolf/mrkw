@@ -9,10 +9,10 @@ import MainMenu from "./MainMenu";
 
 export function Header() {
   return (
-    <div className={"header"}>
+    <header className={"header"}>
       <div className="container header__container">
         <MainMenu />
       </div>
-    </div>
+    </header>
   );
 }
