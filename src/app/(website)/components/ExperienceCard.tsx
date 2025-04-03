@@ -1,10 +1,6 @@
-import { ExperienceItem } from "@/app/common/types";
+//Component: ExperienceCard
 import React from "react";
-
-type CardProps = {
-  className?: string;
-  item: ExperienceItem;
-};
+import { CardProps } from "@/app/common/types";
 
 export default function ExperienceCard({ item, className }: CardProps) {
   return (
