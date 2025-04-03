@@ -1,0 +1,9 @@
+@layer components {
+  .work {
+    background-color: red;
+  }
+  .work__container {
+    @apply container mx-auto bg-amber-400;
+    /* background-color: yellow; */
+  }
+}
