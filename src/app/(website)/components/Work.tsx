@@ -25,7 +25,7 @@ export default function Work() {
   return (
     <section className="work">
       <div className="work__container">
-        <ul className="grid work__list">
+        <ul className="work__list">
           {cardData.map((item) => (
             <li key={item.id} className="work__list-item">
               <Card item={item} />

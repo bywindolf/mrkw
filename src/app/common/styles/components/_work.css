@@ -3,7 +3,13 @@
     background-color: red;
   }
   .work__container {
-    @apply container mx-auto bg-amber-400;
-    /* background-color: yellow; */
+    @apply container mx-auto
+    /* background-color: yellow; */;
+  }
+  .work__list {
+    @apply grid grid-cols-12 bg-amber-700 gap-4  @container;
+  }
+  .work__list-item {
+    @apply bg-amber-500 @8xl:text-8xl;
   }
 }
