@@ -4,7 +4,7 @@ import "@/app/common/index.css";
 import "@fontsource/poppins";
 import "@fontsource/playfair-display";
 import "@fontsource/jetbrains-mono";
-import { Header } from "./(website)/components/Header";
+import { Header } from "./(website)/components/GlobalHeader";
 import { Footer } from "./(website)/components/Footer";
 
 export const metadata: Metadata = {

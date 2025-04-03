@@ -1,5 +1,3 @@
-@tailwind components;
-
 @layer components {
   .logo__image {
     @apply bg-white w-6 h-6 md:w-8 sm:h-8;

@@ -1,5 +1,3 @@
-@tailwind components;
-
 @layer components {
   .main-menu {
     @apply overflow-x-scroll  justify-center hidden lg:block h-screen desktop:h-auto;

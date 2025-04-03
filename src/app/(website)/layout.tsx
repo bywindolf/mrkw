@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 
 import NextTopLoader from "nextjs-toploader";
 import { Providers } from "./Providers";
-import { Header } from "@/app/(website)/components/Header";
+import { GlobalHeader } from "@/app/(website)/components/GlobalHeader";
 import { Footer } from "@/app/(website)/components/Footer";
 import Main from "./components/Main";
 
@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
+        <GlobalHeader />
         <Providers>{children}</Providers>
         <Footer />
       </body>

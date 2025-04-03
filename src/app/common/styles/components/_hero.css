@@ -1,5 +1,3 @@
-@tailwind components;
-
 @layer components {
   .hero__title {
     @apply text-center;
