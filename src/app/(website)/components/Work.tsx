@@ -7,6 +7,7 @@ import Link from "next/link";
 
 // Moved WorkProps
 import { WorkProps, WorkItem, ExperienceItem } from "@/app/common/types";
+import WorkCard from "./WorkCard";
 
 const cardData: WorkItem[] = [
   {
@@ -45,7 +46,7 @@ export default function Work({ type = "work" }: WorkProps) {
             <li key={item.id} className={`${type}__list-item`}>
               {type === "work" ? (
                 <Link href={`${type}/${(item as WorkItem).slug}`}>
-                  <Card item={item} /> {/* Pass item directly */}
+                  <WorkCard item={item} /> {/* Pass item directly */}
                 </Link>
               ) : (
                 <Card item={item} />

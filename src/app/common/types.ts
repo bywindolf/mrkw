@@ -15,6 +15,7 @@ export type WorkItem = {
 export type ExperienceItem = {
   id: number;
   company: string;
+  description: string;
   role: string;
   years: number;
 };
