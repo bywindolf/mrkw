@@ -2,15 +2,19 @@
 
 import React from "react";
 import Card from "./Card";
+import Link from "next/link";
 
 const cardData = [
   {
     id: 1,
+    slug: "firt-item";
     title: "First Item",
     description: "This is the first item description",
   },
   {
     id: 2,
+    slug: "second-item";
+
     title: "Second Item",
     description: "This is the second item description",
   },
@@ -43,7 +47,9 @@ export default function Work() {
         <ul className="work__list">
           {cardData.map((item) => (
             <li key={item.id} className="work__list-item">
-              <Card item={item} />
+              <Link url={}>
+                <Card item={item} />
+              </Link>
             </li>
           ))}
         </ul>

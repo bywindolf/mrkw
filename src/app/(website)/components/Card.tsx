@@ -4,6 +4,7 @@ type CardProps = {
   className?: string;
   item: {
     title: string;
+    slug: string;
     description: string;
   };
 };
