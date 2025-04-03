@@ -14,13 +14,6 @@
     @apply flex gap-2 px-4 py-2 border-2 items-center bg-primary cursor-pointer hover:bg-purple-400 rounded-2xl;
   }
 
-  .container {
-    @apply mx-auto max-w-4xl;
-  }
-  .container-full {
-    @apply mx-auto w-full;
-  }
-
   .header {
     @apply w-full flex items-center justify-center py-16;
     h1 {
