@@ -1,3 +1,3 @@
-export function Footer() {
+export function GlobalFooter() {
   return <footer className="footer">Footer</footer>;
 }
