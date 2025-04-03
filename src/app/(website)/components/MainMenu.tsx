@@ -3,17 +3,14 @@ import MenuItem from "./MenuItem";
 
 const menuData = [
   {
-    id: 1,
     title: "Home",
     url: "/",
   },
   {
-    id: 2,
     title: "Work",
     url: "/work",
   },
   {
-    id: 3,
     title: "About",
     url: "/about",
   },
