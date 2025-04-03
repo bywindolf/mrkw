@@ -11,7 +11,7 @@ type CardProps = {
 export default function Card({ item, className }: CardProps) {
   return (
     <>
-      {item.title}
+      <h4>{item.title}</h4>
       <p>{item.description}</p>
     </>
   );

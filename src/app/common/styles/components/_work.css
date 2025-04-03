@@ -7,9 +7,9 @@
     /* background-color: yellow; */;
   }
   .work__list {
-    @apply grid grid-cols-12 bg-amber-700 gap-4  @container;
+    @apply grid grid-cols-12 bg-amber-700 gap-4 @container;
   }
   .work__list-item {
-    @apply bg-amber-500 @8xl:text-8xl;
+    @apply bg-amber-500 @desktop:text-4xl @desktop:col-span-6 col-span-3;
   }
 }

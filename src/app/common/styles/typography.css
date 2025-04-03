@@ -6,4 +6,5 @@ h2 {
 }
 h4 {
   @apply text-xl;
+  color: red;
 }
