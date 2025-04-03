@@ -52,7 +52,7 @@ const cardData = [
   },
 ];
 
-export default function Work({ type = "work" }): WorkProps {
+export default function Work({ type = "work" }: WorkProps) {
   return (
     <section className={`${type}`}>
       <div className={`${type}__container`}>

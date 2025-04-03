@@ -10,9 +10,9 @@ export default function Experience() {
       <PageHeader>Experience</PageHeader>
       <Main>
         <PageSubHeadline>Professional</PageSubHeadline>
-        <Work />
+        <Work type="experience" />
         <PageSubHeadline>Education</PageSubHeadline>
-        <Work />
+        <Work type="experience" />
       </Main>
     </>
   );
