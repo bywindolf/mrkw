@@ -1,4 +1,9 @@
 @layer components {
+  .hero {
+  }
+  .hero__container {
+    @apply container bg-amber-600;
+  }
   .hero__title {
     @apply text-center;
   }
