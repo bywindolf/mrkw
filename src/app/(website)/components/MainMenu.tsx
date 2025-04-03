@@ -3,10 +3,6 @@ import MenuItem from "./MenuItem";
 
 const menuData = [
   {
-    title: "Home",
-    url: "/",
-  },
-  {
     title: "Work",
     url: "/work",
   },
