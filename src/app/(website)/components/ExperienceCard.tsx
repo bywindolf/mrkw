@@ -9,7 +9,7 @@ type CardProps = {
 export default function ExperienceCard({ item, className }: CardProps) {
   return (
     <>
-      {"title" in item && <h4>{item.company}</h4>}
+      {"company" in item && <h4>{item.company}</h4>}
       {"description" in item && <p>{item.description}</p>}
     </>
   );
