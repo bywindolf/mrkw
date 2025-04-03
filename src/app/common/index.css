@@ -31,8 +31,7 @@
   --color-mint-500: oklch(0.72 0.11 178);
   --color-yellow: #f6e05e;
 
-  --container-8xl: 96rem;
-  --container-desktop: 1024px;
+  --container-desktop: 1400px;
 }
 
 @theme inline {
@@ -44,7 +43,9 @@
   --color-primary: var(--color-indigo-200);
 
   /* Simplying our project with on custom breakpoint TailWind class.*/
-  --breakpoint-desktop: 1024px;
+  --breakpoint-tablet: 1024px;
+
+  --breakpoint-desktop: 1400px;
 }
 
 /* @media (prefers-color-scheme: dark) {

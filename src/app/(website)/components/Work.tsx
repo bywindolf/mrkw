@@ -19,6 +19,21 @@ const cardData = [
     title: "Third Item",
     description: "This is the third item description",
   },
+  {
+    id: 4,
+    title: "First Item",
+    description: "This is the first item description",
+  },
+  {
+    id: 5,
+    title: "Second Item",
+    description: "This is the second item description",
+  },
+  {
+    id: 6,
+    title: "Third Item",
+    description: "This is the third item description",
+  },
 ];
 
 export default function Work() {
