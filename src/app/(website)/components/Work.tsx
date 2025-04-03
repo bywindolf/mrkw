@@ -5,9 +5,8 @@ import React from "react";
 import Card from "./Card";
 import Link from "next/link";
 
-type WorkProps = {
-  type?: "work" | "experience";
-};
+// Moved WorkProps
+import { WorkProps } from "@/app/common/types";
 
 const cardData = [
   {
@@ -59,9 +58,14 @@ export default function Work({ type = "work" }: WorkProps) {
         <ul className={`${type}__list`}>
           {cardData.map((item) => (
             <li key={item.id} className={`${type}__list-item`}>
-              <Link href={`${type}/${item.slug}`}>
+              {type === "work" ? ( // If type equals to work
+                <Link href={`${type}/${item.slug}`}>
+                  <Card item={item} />
+                </Link>
+              ) : (
+                // Else
                 <Card item={item} />
-              </Link>
+              )}
             </li>
           ))}
         </ul>
