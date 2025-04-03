@@ -6,3 +6,9 @@
     @apply mx-auto w-full;
   }
 }
+
+@layer utilities {
+  .grid {
+    @apply grid grid-cols-12 bg-amber-300;
+  }
+}
