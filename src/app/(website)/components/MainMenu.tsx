@@ -7,6 +7,10 @@ const menuData = [
     url: "/work",
   },
   {
+    title: "Experience",
+    url: "/experience",
+  },
+  {
     title: "About",
     url: "/about",
   },
