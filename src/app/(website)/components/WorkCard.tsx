@@ -1,10 +1,5 @@
-import { WorkItem } from "@/app/common/types";
 import React from "react";
-
-type CardProps = {
-  className?: string;
-  item: WorkItem;
-};
+import { CardProps } from "@/app/common/types";
 
 export default function WorkCard({ item, className }: CardProps) {
   return (

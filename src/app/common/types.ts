@@ -20,6 +20,11 @@ export type ExperienceItem = {
   years: number;
 };
 
+export type CardProps = {
+  className?: string;
+  item: ExperienceItem | WorkItem;
+};
+
 // Ends
 
 export type ProductCategory =
