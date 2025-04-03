@@ -1,0 +1,8 @@
+@layer components {
+  .page-header {
+    @apply bg-amber-400;
+  }
+  .page-header__container {
+    @apply container mx-auto;
+  }
+}
