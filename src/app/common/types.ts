@@ -1,9 +1,22 @@
 import { EntityReference } from "@firecms/core";
 
 // For portfolio related tasks (Kristoffer)
-
 export type WorkProps = {
-  type?: "work" | "experience";
+  type: "work" | "experience";
+};
+
+export type WorkItem = {
+  id: number;
+  title: string;
+  slug: string;
+  description: string;
+};
+
+export type ExperienceItem = {
+  id: number;
+  company: string;
+  role: string;
+  years: number;
 };
 
 // Ends

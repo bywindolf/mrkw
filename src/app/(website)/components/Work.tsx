@@ -6,12 +6,12 @@ import Card from "./Card";
 import Link from "next/link";
 
 // Moved WorkProps
-import { WorkProps } from "@/app/common/types";
+import { WorkProps, WorkItem, ExperienceItem } from "@/app/common/types";
 
-const cardData = [
+const cardData: WorkItem[] = [
   {
     id: 1,
-    slug: "firt-item",
+    slug: "first-item",
     title: "First Item",
     description: "This is the first item description",
   },
@@ -23,47 +23,31 @@ const cardData = [
   },
   {
     id: 3,
-    slug: "firt-item",
-
-    title: "Third Item",
-    description: "This is the third item description",
-  },
-  {
-    id: 4,
-    slug: "firt-item",
-
-    title: "First Item",
-    description: "This is the first item description",
-  },
-  {
-    id: 5,
-    slug: "firt-item",
-
-    title: "Second Item",
-    description: "This is the second item description",
-  },
-  {
-    id: 6,
-    slug: "firt-item",
-
+    slug: "third-item",
     title: "Third Item",
     description: "This is the third item description",
   },
 ];
 
+const experienceData: ExperienceItem[] = [
+  { id: 1, company: "Company A", role: "Developer", years: 5 },
+  { id: 2, company: "Company B", role: "Designer", years: 3 },
+];
+
 export default function Work({ type = "work" }: WorkProps) {
+  const items = type === "work" ? cardData : experienceData;
+
   return (
     <section className={`${type}`}>
       <div className={`${type}__container`}>
         <ul className={`${type}__list`}>
-          {cardData.map((item) => (
+          {items.map((item) => (
             <li key={item.id} className={`${type}__list-item`}>
-              {type === "work" ? ( // If type equals to work
-                <Link href={`${type}/${item.slug}`}>
-                  <Card item={item} />
+              {type === "work" ? (
+                <Link href={`${type}/${(item as WorkItem).slug}`}>
+                  <Card item={item} /> {/* Pass item directly */}
                 </Link>
               ) : (
-                // Else
                 <Card item={item} />
               )}
             </li>
