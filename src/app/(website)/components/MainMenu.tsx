@@ -20,8 +20,8 @@ export default function MainMenu() {
   return (
     <nav className={"main-menu"}>
       <ul className="main-menu__list">
-        {menuData.map((item) => (
-          <MenuItem url={item.url} className="main-menu__list-item">
+        {menuData.map((item, index) => (
+          <MenuItem key={index} url={item.url} className="main-menu__list-item">
             {item.title}
           </MenuItem>
         ))}
