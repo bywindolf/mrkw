@@ -1,0 +1,9 @@
+@layer components {
+  .button {
+    @apply flex gap-2 px-4 py-2 border-2 items-center bg-primary cursor-pointer hover:bg-purple-400 rounded-2xl;
+  }
+
+  .button-wrapper {
+    @apply flex gap-2;
+  }
+}
