@@ -36,6 +36,7 @@
     "typeface-rubik": "^1.1.13"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.1",
     "@types/node": "^20.17.9",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
