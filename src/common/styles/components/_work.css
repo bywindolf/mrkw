@@ -12,4 +12,14 @@
   .work__list-item {
     @apply bg-amber-500 @desktop:text-4xl col-span-12 tablet:col-span-6  desktop:col-span-4;
   }
+
+  .workinfo {
+    @apply pt-40 pb-20  bg-amber-400;
+  }
+  .workinfo__container {
+    @apply container mx-auto h-[20rem];
+  }
+  .workinfo__info {
+    @apply flex flex-col h-full justify-between;
+  }
 }
