@@ -32,7 +32,7 @@ import {
   useInitialiseFirebase,
 } from "@firecms/firebase";
 
-import { firebaseConfig } from "../common/firebase_config";
+import { firebaseConfig } from "../../common/firebase_config";
 import { useDataEnhancementPlugin } from "@firecms/data_enhancement";
 import {
   useBuildUserManagement,

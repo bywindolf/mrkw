@@ -1,5 +1,5 @@
 import { buildCollection } from "@firecms/core";
-import { BlogEntry } from "@/app/common/types";
+import { BlogEntry } from "@/common/types";
 
 export const workCollection = buildCollection<BlogEntry>({
   id: "work",

@@ -6,7 +6,7 @@ import Card from "./WorkCard";
 import Link from "next/link";
 
 // Moved WorkProps
-import { WorkProps, WorkItem, ExperienceItem } from "@/app/common/types";
+import { WorkProps, WorkItem, ExperienceItem } from "@/common/types";
 import WorkCard from "./WorkCard";
 import ExperienceCard from "./ExperienceCard";
 

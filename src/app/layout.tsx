@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import "@/app/common/index.css";
+import "@/common/index.css";
 import "@fontsource/poppins";
 import "@fontsource/playfair-display";
 import "@fontsource/jetbrains-mono";
