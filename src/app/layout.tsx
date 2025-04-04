@@ -4,8 +4,8 @@ import "@/app/common/index.css";
 import "@fontsource/poppins";
 import "@fontsource/playfair-display";
 import "@fontsource/jetbrains-mono";
-import { Header } from "./(website)/components/GlobalHeader";
-import { Footer } from "./(website)/components/GlobalFooter";
+// import { Header } from "./(website)/components/GlobalHeader";
+// import { Footer } from "./(website)/components/GlobalFooter";
 
 export const metadata: Metadata = {
   title: "MRKW – Now it's personal",

@@ -7,11 +7,12 @@ export default function Home() {
   return (
     <>
       <Hero>
-        <h1>Hello hero</h1>
+        <h1>Hello hero!</h1>
       </Hero>
       <Main>
         <PageSubHeadline>Featured works</PageSubHeadline>
-        <Work />
+        <Work type="work" />
+        <Work type="experience" />
       </Main>
     </>
   );
