@@ -1,8 +1,8 @@
 //Component GlobalHeader
 
 import React from "react";
-import MainMenu from "./MainMenu";
-import Logo from "./Logo";
+import MainMenu from "./main-menu";
+import Logo from "./logo";
 
 export function GlobalHeader() {
   return (

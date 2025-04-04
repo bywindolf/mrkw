@@ -1,7 +1,7 @@
-import Hero from "./components/Hero";
-import Main from "./components/Main";
-import PageSubHeadline from "./components/PageSubHeadline";
-import Work from "./components/Work";
+import Hero from "./components/hero";
+import Main from "./components/main";
+import PageSubHeadline from "./components/page-sub-headline";
+import Work from "./components/work";
 
 export default function Home() {
   return (

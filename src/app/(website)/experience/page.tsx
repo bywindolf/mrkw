@@ -1,9 +1,8 @@
 import React from "react";
-import PageHeader from "../components/PageHeader";
-import Main from "../components/Main";
-import PageSubHeadline from "../components/PageSubHeadline";
+import PageHeader from "../components/page-header";
+import Main from "../components/main";
+import PageSubHeadline from "../components/page-sub-headline";
 import Work from "../components/Work";
-
 export default function Experience() {
   return (
     <>

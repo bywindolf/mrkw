@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 
 import NextTopLoader from "nextjs-toploader";
 import { Providers } from "./Providers";
-import { GlobalHeader } from "@/app/(website)/components/GlobalHeader";
-import { GlobalFooter } from "@/app/(website)/components/GlobalFooter";
-import Main from "./components/Main";
+import { GlobalHeader } from "@/app/(website)/components/global-header";
+import { GlobalFooter } from "@/app/(website)/components/global-footer";
+import Main from "./components/main";
 
 export const metadata: Metadata = {
   title: "FireCMS e-commerce and blog demo",
