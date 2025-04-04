@@ -2,13 +2,12 @@
 //Want to make this component to be "smart" and make use of prop defining what kind of "list" we should serve
 
 import React from "react";
-import Card from "./WorkCard";
 import Link from "next/link";
 
 // Moved WorkProps
-import { WorkProps, WorkItem, ExperienceItem } from "@/app/common/types";
-import WorkCard from "./WorkCard";
-import ExperienceCard from "./ExperienceCard";
+import { WorkProps, WorkItem, ExperienceItem } from "@/common/types";
+import WorkCard from "./work-card";
+import ExperienceCard from "./experience-card";
 
 const cardData: WorkItem[] = [
   {

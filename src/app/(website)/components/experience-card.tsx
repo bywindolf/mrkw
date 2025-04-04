@@ -1,6 +1,6 @@
 //Component: ExperienceCard
 import React from "react";
-import { CardProps } from "@/app/common/types";
+import { CardProps } from "@/common/types";
 
 export default function ExperienceCard({ item, className }: CardProps) {
   return (

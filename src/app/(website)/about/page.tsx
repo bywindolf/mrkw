@@ -1,6 +1,6 @@
 import React from "react";
-import PageHeader from "../components/PageHeader";
-import Main from "../components/Main";
+import PageHeader from "../components/page-header";
+import Main from "../components/main";
 
 export default function About() {
   return (
