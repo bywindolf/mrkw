@@ -2,7 +2,7 @@ import React from "react";
 import PageHeader from "../components/page-header";
 import Main from "../components/main";
 import PageSubHeadline from "../components/page-sub-headline";
-import Work from "../components/Work";
+import Work from "../components/work";
 import { fetchDevProfile } from "@/common/actions";
 
 export default async function Experience() {

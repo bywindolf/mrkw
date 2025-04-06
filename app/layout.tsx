@@ -1,10 +1,7 @@
-import React from "react";
-
 import type { Metadata } from "next";
-
+import "./global.css";
 import { GlobalHeader } from "app/components/global-header";
 import { GlobalFooter } from "app/components/global-footer";
-import Main from "./components/main";
 
 export const metadata: Metadata = {
   title: "FireCMS e-commerce and blog demo",
