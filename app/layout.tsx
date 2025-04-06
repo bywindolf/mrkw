@@ -2,10 +2,8 @@ import React from "react";
 
 import type { Metadata } from "next";
 
-import NextTopLoader from "nextjs-toploader";
-import { Providers } from "./Providers";
-import { GlobalHeader } from "@/app/(website)/components/global-header";
-import { GlobalFooter } from "@/app/(website)/components/global-footer";
+import { GlobalHeader } from "app/components/global-header";
+import { GlobalFooter } from "app/components/global-footer";
 import Main from "./components/main";
 
 export const metadata: Metadata = {
@@ -23,7 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <GlobalHeader />
-        <Providers>{children}</Providers>
+        {children}
         <GlobalFooter />
       </body>
     </html>

@@ -1,5 +1,5 @@
 import React from "react";
-import Main from "@/app/(website)/components/main";
+import Main from "app/components/main";
 
 export default function SingleWork() {
   return (
