@@ -31,8 +31,8 @@ const cardData: WorkItem[] = [
 ];
 
 const experienceData: ExperienceItem[] = [
-  { id: 1, company: "Company A", role: "Developer", years: 5 },
-  { id: 2, company: "Company B", role: "Designer", years: 3 },
+  { id: 1, company: "Company A", role: "Developer" },
+  { id: 2, company: "Company B", role: "Designer" },
 ];
 
 export default function Work({ type = "work" }: WorkProps) {

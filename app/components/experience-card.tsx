@@ -2,7 +2,12 @@ import React from "react";
 import { CardProps } from "@/common/types";
 import { format } from "date-fns"; // Optional: for better date formatting
 
-export default function ExperienceCard({ item, className }: CardProps) {
+type FirestoreTimestamp = {
+  _seconds: number;
+  _nanoseconds?: number;
+};
+
+export default function ExperienceCard({ item }: CardProps) {
   // Log the entire item for debugging to ensure correct data is passed
   console.log("Item data:", item);
 
@@ -15,17 +20,19 @@ export default function ExperienceCard({ item, className }: CardProps) {
   let endDate: Date | null = null;
 
   // Handle start date parsing
-  if (start && start._seconds) {
-    startDate = new Date(start._seconds * 1000); // Convert Firestore Timestamp (_seconds to milliseconds)
+  if (start && typeof start === "object" && "_seconds" in start) {
+    const timestamp = start as FirestoreTimestamp;
+    startDate = new Date(timestamp._seconds * 1000);
   } else if (typeof start === "string") {
-    startDate = new Date(start); // If start is a string, create a Date object
+    startDate = new Date(start);
   }
 
   // Handle end date parsing
-  if (end && end._seconds) {
-    endDate = new Date(end._seconds * 1000); // Convert Firestore Timestamp (_seconds to milliseconds)
+  if (end && typeof end === "object" && "_seconds" in end) {
+    const timestamp = end as FirestoreTimestamp;
+    endDate = new Date(timestamp._seconds * 1000);
   } else if (typeof end === "string") {
-    endDate = new Date(end); // If end is a string, create a Date object
+    endDate = new Date(end);
   }
 
   // Log the parsed date objects for debugging
@@ -41,10 +48,13 @@ export default function ExperienceCard({ item, className }: CardProps) {
   return (
     <>
       {/* Conditional rendering to display the data */}
-      {"role" in item && <h4 className="experience__role">{item.role}</h4>}
-      {"company" in item && (
-        <h4 className="experience__company">{item.company}</h4>
-      )}
+
+      <div className="expericene__headline">
+        {"role" in item && <h4 className="experience__role">{item.role}</h4>}
+        {"company" in item && (
+          <h4 className="experience__company">{item.company}</h4>
+        )}
+      </div>
       {/* If description exists, render it as HTML */}
       {"description" in item && item.description && (
         <div

@@ -5,6 +5,8 @@ export default {
     "./app/**/*.{ts,tsx,js,jsx}",
     "./pages/**/*.{ts,tsx,js,jsx}",
     "./components/**/*.{ts,tsx,js,jsx}",
+    "./styles/**/*.{css}", // Make sure styles are included too
+    "./styles/components/*.{css}", // Make sure styles are included too
   ],
   theme: {
     extend: {},

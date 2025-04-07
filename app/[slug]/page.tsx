@@ -6,10 +6,10 @@ import Main from "../components/main";
 export default async function CMSPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
   // Await params.slug for dynamic routing
-  const { slug } = params; // Destructure and use it directly
+  const { slug } = await params; // Destructure and use it directly
 
   const formattedSlug = `${slug}`; // Make sure you format the slug as needed (e.g., with "/")
 
