@@ -1,5 +1,4 @@
 import { db } from "@/lib/firebaseAdmin"; // import the initialized Firebase Admin SDK
-
 import React from "react";
 import PageHeader from "../components/page-header";
 import Main from "../components/main";
@@ -32,7 +31,7 @@ export default async function Experience() {
         <PageSubHeadline>Professional</PageSubHeadline>
         <ul className="experience__list">
           {experienceData.map((item) => (
-            <li key={item.id} className="list__item">
+            <li key={item.id} className="experience__item">
               <ExperienceCard item={item} />
             </li>
           ))}
@@ -40,7 +39,7 @@ export default async function Experience() {
         <PageSubHeadline>Education</PageSubHeadline>
         <ul className="experience__list">
           {educationData.map((item) => (
-            <li key={item.id} className="list__item">
+            <li key={item.id} className="experience__item">
               <ExperienceCard item={item} />
             </li>
           ))}
