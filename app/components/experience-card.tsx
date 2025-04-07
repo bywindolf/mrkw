@@ -1,6 +1,5 @@
 import React from "react";
 import { CardProps } from "@/common/types";
-import { Timestamp } from "firebase/firestore"; // Import Timestamp from Firebase
 import { format } from "date-fns"; // Optional: for better date formatting
 
 export default function ExperienceCard({ item, className }: CardProps) {
