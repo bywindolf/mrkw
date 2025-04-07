@@ -42,17 +42,26 @@ export default function ExperienceCard({ item, className }: CardProps) {
   return (
     <>
       {/* Conditional rendering to display the data */}
-      {"role" in item && <h4 className="role">{item.role}</h4>}
-      {"company" in item && <h4 className="company">{item.company}</h4>}
+      {"role" in item && <h4 className="experience__role">{item.role}</h4>}
+      {"company" in item && (
+        <h4 className="experience__company">{item.company}</h4>
+      )}
       {/* If description exists, render it as HTML */}
       {"description" in item && item.description && (
         <div
-          className="description"
+          className="experience__description"
           dangerouslySetInnerHTML={{ __html: item.description }}
         />
-      )}{" "}
-      {"start" in item && startDate && <p>{`Start Date: ${formattedStart}`}</p>}
-      {"end" in item && endDate && <p>{`End Date: ${formattedEnd}`}</p>}
+      )}
+
+      {("start" in item && startDate) || ("end" in item && endDate) ? (
+        <div className="experience__dates">
+          {"start" in item && startDate && (
+            <p>{`Start Date: ${formattedStart}`}</p>
+          )}
+          {"end" in item && endDate && <p>{`End Date: ${formattedEnd}`}</p>}
+        </div>
+      ) : null}
     </>
   );
 }

@@ -8,6 +8,7 @@ export default function Home() {
     <>
       <Hero>
         <h1>Hello hero!</h1>
+        <h2></h2>
       </Hero>
       <Main>
         <PageSubHeadline>Featured works</PageSubHeadline>
