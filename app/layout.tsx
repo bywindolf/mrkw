@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import "./global.css";
-import { GlobalHeader } from "app/components/global-header";
-import { GlobalFooter } from "app/components/global-footer";
+import "../app/global.css";
+import { GlobalHeader } from "./components/global-header";
+import { GlobalFooter } from "./components/global-footer";
 
 export const metadata: Metadata = {
   title: "FireCMS e-commerce and blog demo",

@@ -1,51 +1,50 @@
+import { db } from "@/lib/firebaseAdmin"; // import the initialized Firebase Admin SDK
+
 import React from "react";
 import PageHeader from "../components/page-header";
 import Main from "../components/main";
 import PageSubHeadline from "../components/page-sub-headline";
-import Work from "../components/work";
-import { fetchDevProfile } from "@/common/actions";
+import { ExperienceItem } from "@/common/types";
+import ExperienceCard from "../components/experience-card";
+// import { fetchDevProfile } from "@/common/actions";
 
 export default async function Experience() {
-  //Get my devProfile
-  const data = await fetchDevProfile();
+  // Firebase way of fetching data for "collections" of data
+  const experienceSnapshot = await db.collection("experience").get();
+  const experienceData: ExperienceItem[] = experienceSnapshot.docs.map(
+    (doc) => ({
+      id: doc.id,
+      ...(doc.data() as Omit<ExperienceItem, "id">), // assuming id comes from doc.id
+    })
+  );
 
-  // console.log(data);
+  const eduationSnapshot = await db.collection("education").get();
+  const educationData: ExperienceItem[] = eduationSnapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...(doc.data() as Omit<ExperienceItem, "id">), // assuming id comes from doc.id
+  }));
 
   return (
     <>
       <PageHeader>Experience</PageHeader>
-      <section className="dev-profile">
-        <div className="dev-profile__container">
-          <div className="skills">
-            <h3>test</h3>
-            <ul className="skills__list">
-              {
-                //Skills may be used in other parts of app
-                //Iterate over my skills
-                data.skills.map((skill: string, index: number) => (
-                  <li key="{index}">{skill}</li>
-                ))
-              }
-            </ul>
-          </div>
-          <div className="environments">
-            <ul className="environments__list">
-              {
-                //Iterate over my skills
-                data.environments.map((env: string, index: number) => (
-                  <li key="{index}">{env}</li>
-                ))
-              }
-            </ul>
-          </div>
-        </div>
-      </section>
+
       <Main>
         <PageSubHeadline>Professional</PageSubHeadline>
-        <Work type="experience" />
+        <ul className="experience__list">
+          {experienceData.map((item) => (
+            <li key={item.id} className="list__item">
+              <ExperienceCard item={item} />
+            </li>
+          ))}
+        </ul>
         <PageSubHeadline>Education</PageSubHeadline>
-
-        <Work type="experience" />
+        <ul className="experience__list">
+          {educationData.map((item) => (
+            <li key={item.id} className="list__item">
+              <ExperienceCard item={item} />
+            </li>
+          ))}
+        </ul>
       </Main>
     </>
   );
