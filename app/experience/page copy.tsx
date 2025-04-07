@@ -1,18 +1,31 @@
+import { db } from "@/lib/firebaseAdmin"; // import the initialized Firebase Admin SDK
+
 import React from "react";
 import PageHeader from "../components/page-header";
 import Main from "../components/main";
 import PageSubHeadline from "../components/page-sub-headline";
-import Work from "../components/Work";
-import { fetchDevProfile } from "@/common/actions";
+import Work from "../components/work";
+// import { fetchDevProfile } from "@/common/actions";
 
 export default async function Experience() {
   //Get my devProfile
-  const data = await fetchDevProfile();
+  // const data = await fetchDevProfile();
 
   // console.log(data);
 
+  const snapshot = await db.collection("experience").get();
+  const data = snapshot.docs.map((doc) => doc.data());
+
   return (
     <>
+      <div>
+        {data.map((exp, index) => (
+          <div key={index}>
+            <h2>{exp.position}</h2>
+            <p>{exp.company}</p>
+          </div>
+        ))}
+      </div>
       <PageHeader>Experience</PageHeader>
       <section className="dev-profile">
         <div className="dev-profile__container">

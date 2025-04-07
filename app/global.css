@@ -1,26 +1,9 @@
 @import "tailwindcss";
-@import "./styles/layout.css";
-@import "./styles/typography.css";
 
-@import "./styles/components.css";
+@import "../styles/layout.css";
+@import "../styles/typography.css";
 
-:root {
-  --fcms-primary: #0070f4;
-  --fcms-primary-bg: #0061e610;
-  --fcms-secondary: #ff5b79;
-}
-
-@layer utilities {
-  /* Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-
-  .no-scrollbar {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-}
+@import "../styles/components.css";
 
 :root {
   --background: #ffffff;
