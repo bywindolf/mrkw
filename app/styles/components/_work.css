@@ -1,25 +1,20 @@
 @layer components {
-  .work {
-    background-color: red;
-  }
-  .work__container {
-    @apply container mx-auto
-    /* background-color: yellow; */;
-  }
-  .work__list {
-    @apply grid grid-cols-12 bg-amber-700 gap-4 @container;
-  }
-  .work__list-item {
-    @apply bg-amber-500 @desktop:text-4xl col-span-12 tablet:col-span-6  desktop:col-span-4;
-  }
+    .work {
+    }
+    .work__list {
+        @apply max-w-desktop mx-auto grid grid-cols-12;
+    }
+    .work__item {
+        @apply tablet:col-span-6 desktop:col-span-4 col-span-12;
+    }
 
-  .workinfo {
-    @apply pt-40 pb-20  bg-amber-400;
-  }
-  .workinfo__container {
-    @apply container mx-auto h-[20rem];
-  }
-  .workinfo__info {
-    @apply flex flex-col h-full justify-between;
-  }
+    .workinfo {
+        @apply bg-amber-400 pt-40 pb-20;
+    }
+    .workinfo__container {
+        @apply container mx-auto h-[20rem];
+    }
+    .workinfo__info {
+        @apply flex h-full flex-col justify-between;
+    }
 }

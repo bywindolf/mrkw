@@ -9,7 +9,10 @@ import ExperienceCard from '../components/experience-card'
 
 export default async function Experience() {
     // Firebase way of fetching data for "collections" of data
-    const experienceSnapshot = await db.collection('experience').get()
+    const experienceSnapshot = await db
+        .collection('experience')
+        .orderBy('end', 'desc')
+        .get()
     const experienceData: ExperienceItem[] = experienceSnapshot.docs.map(
         (doc) => ({
             id: doc.id,
@@ -31,23 +34,21 @@ export default async function Experience() {
 
             <Main>
                 <PageSubHeadline>Professional</PageSubHeadline>
-                <div className="container">
-                    <ul className="experience__list">
-                        {experienceData.map((item) => (
-                            <li key={item.id} className="experience__item">
-                                <ExperienceCard item={item} />
-                            </li>
-                        ))}
-                    </ul>
-                    <PageSubHeadline>Education</PageSubHeadline>
-                    <ul className="experience__list">
-                        {educationData.map((item) => (
-                            <li key={item.id} className="experience__item">
-                                <ExperienceCard item={item} />
-                            </li>
-                        ))}
-                    </ul>
-                </div>
+                <ul className="experience__list">
+                    {experienceData.map((item) => (
+                        <li key={item.id} className="experience__item">
+                            <ExperienceCard item={item} />
+                        </li>
+                    ))}
+                </ul>
+                <PageSubHeadline>Education</PageSubHeadline>
+                <ul className="experience__list">
+                    {educationData.map((item) => (
+                        <li key={item.id} className="experience__item">
+                            <ExperienceCard item={item} />
+                        </li>
+                    ))}
+                </ul>
             </Main>
         </>
     )

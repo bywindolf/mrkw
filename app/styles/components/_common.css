@@ -9,11 +9,10 @@
         @apply leading-none;
     }
     .main {
-        @apply flex flex-col bg-gray-100 px-8 pt-24 pb-24 align-middle text-gray-800;
+        @apply flex flex-col px-8 pt-24 pb-24 align-middle;
     }
 
-    .hero {
-        @apply flex aspect-[16/6] flex-col items-center justify-center gap-2 bg-gray-200 p-8;
+    .main {
     }
 
     .header {

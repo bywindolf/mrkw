@@ -1,8 +1,8 @@
 @layer components {
-  .page-header {
-    @apply bg-amber-400;
-  }
-  .page-header__container {
-    @apply container mx-auto;
-  }
+    .page-header {
+        @apply px-8 pt-40 pb-20;
+    }
+    .page-header__container {
+        @apply max-w-desktop mx-auto;
+    }
 }

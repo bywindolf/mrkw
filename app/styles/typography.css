@@ -1,11 +1,28 @@
 @layer base {
-  h1 {
-    @apply text-5xl;
-  }
-  h2 {
-    @apply text-3xl;
-  }
-  h4 {
-    @apply text-3xl desktop:text-orange-500;
-  }
+    body {
+        font-family: var(--font-sans);
+        font-size: var(--step-0);
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+        @apply font-medium;
+    }
+    h1 {
+        font-size: var(--step-5);
+        @apply leading-tight;
+    }
+    h2 {
+        font-size: var(--step-3);
+    }
+    h3 {
+        font-size: var(--step-4);
+    }
+    h4 {
+        font-size: var(--step-1);
+    }
 }
