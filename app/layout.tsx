@@ -19,7 +19,7 @@ export default function RootLayout({
             <body>
                 <GlobalHeader />
                 {children}
-                {/* <GlobalFooter /> */}
+                <GlobalFooter />
             </body>
         </html>
     )

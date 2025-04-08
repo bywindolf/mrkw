@@ -8,9 +8,6 @@ type FirestoreTimestamp = {
 }
 
 export default function ExperienceCard({ item }: CardProps) {
-    // Log the entire item for debugging to ensure correct data is passed
-    console.log('Item data:', item)
-
     // Extract the start and end fields
     const start = item.start // Firestore Timestamp
     const end = item.end // Firestore Timestamp
@@ -59,10 +56,19 @@ export default function ExperienceCard({ item }: CardProps) {
             </div>
             {/* If description exists, render it as HTML */}
             {'description' in item && item.description && (
-                <div
-                    className="experience__description"
-                    dangerouslySetInnerHTML={{ __html: item.description }}
-                />
+                <div className="experience__content">
+                    <div
+                        className="experience__description"
+                        dangerouslySetInnerHTML={{ __html: item.description }}
+                    />
+                    <div className="experience__skills">
+                        {item.skills?.map((skill: string, index) => (
+                            <span className={`tag tag--${skill}`} key={index}>
+                                {skill}
+                            </span>
+                        ))}
+                    </div>
+                </div>
             )}
 
             {('start' in item && startDate) || ('end' in item && endDate) ? (

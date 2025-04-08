@@ -1,6 +1,6 @@
 @layer components {
     .hero {
-        @apply desktop:aspect-[16/8] flex flex-col items-center justify-center px-8 py-30;
+        @apply desktop:aspect-[16/8] text-background bg-primary -mx-8 flex flex-col items-center justify-center px-8 py-30;
     }
     .hero h1 {
         font-size: var(--step-7);

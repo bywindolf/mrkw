@@ -28,7 +28,9 @@
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-mint-500: oklch(0.72 0.11 178);
-    --color-yellow: #f6e05e;
+    --color-yellow: red;
+
+    --color-primary: var(--color-yellow);
 
     --container-desktop: 1400px;
 }
@@ -38,8 +40,6 @@
     --font-weight-medium: 500;
     --font-mono: var(--font-geist-mono);
     --font-heading: 'Inter Tight';
-
-    --color-primary: var(--color-indigo-200);
 
     /* Simplying our project with on custom breakpoint TailWind class.*/
     --breakpoint-tablet: 1024px;
@@ -52,6 +52,7 @@
     :root {
         --background: rgb(36, 36, 36);
         --foreground: #dedede;
+        --color-primary: rgb(40, 100, 45);
     }
 }
 
@@ -59,7 +60,7 @@ body {
     background: var(--background);
     color: var(--foreground);
 
-    @apply grid grid-rows-[auto_minmax(900px,1fr)_auto];
+    /* @apply grid grid-rows-[auto_minmax(900px,1fr)_auto]; */
 }
 
 /* From here we using some TailWind logic */

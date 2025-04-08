@@ -1,6 +1,6 @@
 @layer components {
     .button {
-        @apply bg-primary w-auto cursor-pointer items-center gap-2 rounded-2xl border-2 px-4 py-2 hover:bg-purple-400;
+        @apply bg-background text-primary w-auto cursor-pointer items-center gap-2 rounded-2xl border-2 px-4 py-2 hover:bg-purple-400;
     }
 
     .button-wrapper {

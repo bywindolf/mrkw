@@ -3,7 +3,7 @@
         @apply bg-background fixed z-1 w-full p-8 opacity-90;
     }
     .global-header__container {
-        @apply container mx-auto flex items-center justify-between gap-4;
+        @apply mx-auto flex items-center justify-between gap-4;
     }
     .global-header__logo {
         @apply flex flex-wrap items-center gap-2 text-2xl text-nowrap;

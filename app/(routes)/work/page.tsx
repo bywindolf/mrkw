@@ -1,9 +1,9 @@
 import React from 'react'
-import PageHeader from '../components/page-header'
-import Main from '../components/main'
+import PageHeader from '@/app/components/page-header'
 import { db } from '@/lib/firebaseAdmin'
 import { WorkItem } from '@/common/types'
-import WorkCard from '../components/work-card'
+import WorkCard from '@/app/components/work-card'
+import Main from '@/app/components/main'
 
 export default async function page() {
     //Fetch our Work collection from Firebase (DB)
