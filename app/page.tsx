@@ -14,7 +14,7 @@ export default function Home() {
                 </h1>
                 <p>Littery have beend coding since the age of MS-Dos.</p>
 
-                <Link href="/" className="btn btn-primay">
+                <Link href="/" className="button btn-primay">
                     Experiences in written
                 </Link>
             </Hero>

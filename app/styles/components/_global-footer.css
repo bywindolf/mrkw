@@ -5,6 +5,6 @@
     }
 
     .global-footer__container {
-        @apply grid grid-cols-4 gap-16;
+        @apply max-w-desktop mx-auto grid grid-cols-4 gap-16;
     }
 }
