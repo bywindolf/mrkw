@@ -1,12 +1,12 @@
 @layer components {
     .hero {
-        @apply flex aspect-[16/8] flex-col items-center justify-center gap-2 p-8;
+        @apply desktop:aspect-[16/8] flex flex-col items-center justify-center px-8 py-30;
     }
     .hero h1 {
         font-size: var(--step-7);
     }
     .hero__container {
-        @apply max-w-desktop w-full;
+        @apply max-w-desktop grid w-full justify-items-start gap-4;
     }
     .hero__title {
         @apply text-center;

@@ -1,6 +1,6 @@
 @layer components {
     .page-sub-headline {
         font-size: var(--step-1);
-        @apply max-w-desktop mx-auto w-full;
+        @apply max-w-desktop mx-auto mb-8 w-full dark:text-gray-400;
     }
 }
