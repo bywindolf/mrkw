@@ -7,12 +7,12 @@
         @apply grid grid-cols-12 bg-amber-300;
     }
     .expericene__headline {
-        @apply order-1 col-span-8 bg-amber-500;
+        @apply desktop:col-span-2 order-1 col-span-8 bg-amber-500;
     }
     .experience__dates {
-        @apply order-2 col-span-4 bg-amber-800 md:px-0.5;
+        @apply desktop:col-span-2 order-2 col-span-4 bg-amber-800 md:px-0.5;
     }
     .experience__description {
-        @apply order-4 col-span-12 bg-amber-950;
+        @apply desktop:order-2 desktop:col-span-8 order-3 col-span-12 bg-amber-950;
     }
 }

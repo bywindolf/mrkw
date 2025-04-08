@@ -1,26 +1,26 @@
 @layer components {
-  .product-list {
-    @apply grid grid-cols-12 gap-8;
-    .button {
-      @apply ml-auto mt-auto align-bottom;
+    .product-list {
+        @apply grid grid-cols-12 gap-8;
+        .button {
+            @apply mt-auto ml-auto align-bottom;
+        }
     }
-  }
-  .product-card {
-    @apply flex flex-col col-span-6 desktop:col-span-3 rounded-2xl shadow-2xl;
-  }
+    .product-card {
+        @apply desktop:col-span-3 col-span-6 flex flex-col rounded-2xl shadow-2xl;
+    }
 
-  .product-card__image {
-    @apply w-auto aspect-square object-cover;
-  }
-  .product-card__wrapper {
-    @apply h-full p-4;
-  }
-  .product-info {
-    @apply h-full flex flex-col;
-  }
-  .product-info__title {
-  }
-  .product-info__price {
-    @apply text-2xl;
-  }
+    .product-card__image {
+        @apply aspect-square w-auto object-cover;
+    }
+    .product-card__wrapper {
+        @apply h-full p-4;
+    }
+    .product-info {
+        @apply flex h-full flex-col;
+    }
+    .product-info__title {
+    }
+    .product-info__price {
+        @apply text-2xl;
+    }
 }
