@@ -1,5 +1,6 @@
 @layer components {
     .page-sub-headline {
-        @apply container mx-auto grid;
+        font-size: var(--step-1);
+        @apply max-w-desktop mx-auto w-full;
     }
 }

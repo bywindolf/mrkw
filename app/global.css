@@ -1,17 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @import 'tailwindcss';
-
-@layer utilities {
-    .grid {
-        @apply grid grid-cols-12;
-    }
-    .apa {
-        @apply bg-blue-600;
-    }
-    .container {
-        @apply mx-auto bg-red-400;
-    }
-}
-
 @import './styles/layout.css';
 @import './styles/typography.css';
 @import './styles/components.css';
@@ -21,7 +10,23 @@
     --foreground: #171717;
 }
 
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--2: clamp(0.6944rem, 0.6856rem + 0.0444vw, 0.72rem);
+    --step--1: clamp(0.8333rem, 0.8101rem + 0.1159vw, 0.9rem);
+    --step-0: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --step-1: clamp(1.2rem, 1.1283rem + 0.3587vw, 1.4063rem);
+    --step-2: clamp(1.44rem, 1.3295rem + 0.5527vw, 1.7578rem);
+    --step-3: clamp(1.728rem, 1.5648rem + 0.8161vw, 2.1973rem);
+    --step-4: clamp(2.0736rem, 1.8395rem + 1.1704vw, 2.7466rem);
+    --step-5: clamp(2.4883rem, 2.1597rem + 1.6433vw, 3.4332rem);
+    --step-6: clamp(2.986rem, 2.5319rem + 2.2705vw, 4.2915rem);
+    --step-7: clamp(3.5832rem, 2.9636rem + 3.0978vw, 5.3644rem);
+}
 @theme {
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
     --color-mint-500: oklch(0.72 0.11 178);
     --color-yellow: #f6e05e;
 
@@ -29,10 +34,10 @@
 }
 
 @theme inline {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
+    --font-sans: 'Inter';
+    --font-weight-medium: 500;
     --font-mono: var(--font-geist-mono);
+    --font-heading: 'Inter Tight';
 
     --color-primary: var(--color-indigo-200);
 
@@ -40,19 +45,21 @@
     --breakpoint-tablet: 1024px;
 
     --breakpoint-desktop: 1400px;
+    --leading-tight: 1;
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
     :root {
-      --background: #0a0a0a;
-      --foreground: #ededed;
+        --background: rgb(36, 36, 36);
+        --foreground: #dedede;
     }
-  } */
+}
 
 body {
     background: var(--background);
     color: var(--foreground);
-    font-family: Arial, Helvetica, sans-serif;
+
+    @apply grid grid-rows-[auto_minmax(900px,1fr)_auto];
 }
 
 /* From here we using some TailWind logic */
