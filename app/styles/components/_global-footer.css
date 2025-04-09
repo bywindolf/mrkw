@@ -1,0 +1,22 @@
+@layer components {
+    .global-footer {
+        @apply px-8 pb-8;
+    }
+    .global-footer__logo {
+    }
+
+    .global-footer__container {
+        @apply max-w-desktop desktop:grid-cols-12 mx-auto grid grid-cols-6 gap-16;
+    }
+    .some__list {
+    }
+    .branding {
+        @apply desktop:col-span-6 tablet:col-span-6 col-span-6;
+    }
+    .some {
+        @apply desktop:col-span-6 tablet:col-span-6 col-span-6;
+    }
+    .some__list {
+        @apply flex justify-end gap-2;
+    }
+}

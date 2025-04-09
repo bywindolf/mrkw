@@ -1,0 +1,14 @@
+@layer components {
+    .hero {
+        @apply desktop:aspect-[16/8] text-background bg-primary -mx-8 flex flex-col items-center justify-center px-8 py-30;
+    }
+    .hero h1 {
+        font-size: var(--step-7);
+    }
+    .hero__container {
+        @apply max-w-desktop grid w-full justify-items-start gap-4;
+    }
+    .hero__title {
+        @apply text-center;
+    }
+}
