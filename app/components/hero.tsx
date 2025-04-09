@@ -1,4 +1,4 @@
-//Component: Hero.
+//Component: Hero
 
 import React, { PropsWithChildren } from 'react'
 
