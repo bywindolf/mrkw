@@ -27,7 +27,8 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "app/components/_HeaderLink.tsx.disabled"
+        "app/components/_HeaderLink.tsx.disabled",
+        "next.config.js"
     ],
     "exclude": ["node_modules"]
 }

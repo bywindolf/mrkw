@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import Main from './components/main'
 import PageSubHeadline from './components/page-sub-headline'
-import Work from './components/Work'
-import Hero from './components/Hero'
+import Hero from './components/hero'
 
 export default function Home() {
     return (
@@ -19,8 +18,8 @@ export default function Home() {
                     </Link>
                 </Hero>
                 <PageSubHeadline>Featured works</PageSubHeadline>
-                <Work type="work" />
-                <Work type="experience" />
+                {/* <Work type="work" />
+                <Work type="experience" /> */}
             </Main>
         </>
     )

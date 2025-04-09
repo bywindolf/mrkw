@@ -1,7 +1,7 @@
 import React from 'react'
 import Main from '@/app/components/main'
 import { db } from '@/lib/firebaseAdmin'
-
+import Image from 'next/image'
 interface SingleWorkProps {
     params: {
         slug: string
@@ -15,6 +15,7 @@ export default async function SingleWork({ params }: SingleWorkProps) {
 
     const page = snapshot.docs.map((doc) => doc.data())[0]
     console.log(page)
+    // const cover = page.cover[0].downloadURL || null
     return (
         <>
             <section className="workinfo">
@@ -33,6 +34,9 @@ export default async function SingleWork({ params }: SingleWorkProps) {
                         </div>
                     </div>
                 </div>
+                {/* {cover && (
+                    <Image width={1000} height={122} src={cover} alt=""></Image>
+                )} */}
             </section>
             <Main>test</Main>
         </>
