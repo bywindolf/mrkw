@@ -12,6 +12,7 @@ export type WorkItem = {
     start?: string
     end?: string
     skills?: string[]
+    cover: { downloadURL: string }[]
 }
 
 export type ExperienceItem = {
@@ -23,6 +24,7 @@ export type ExperienceItem = {
     start?: string
     end?: string
     skills?: string[]
+    cover: { downloadURL: string }[]
 }
 
 export type CardProps = {

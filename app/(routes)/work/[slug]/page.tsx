@@ -14,8 +14,9 @@ export default async function SingleWork({ params }: SingleWorkProps) {
     const snapshot = await db.collection('work').where('slug', '==', slug).get()
 
     const page = snapshot.docs.map((doc) => doc.data())[0]
-    console.log(page)
-    // const cover = page.cover[0].downloadURL || null
+    // console.log(page)
+    // Check cover, if missing return null
+    const cover = page.cover?.[0]?.downloadURL || null
     return (
         <>
             <section className="workinfo">
@@ -34,9 +35,9 @@ export default async function SingleWork({ params }: SingleWorkProps) {
                         </div>
                     </div>
                 </div>
-                {/* {cover && (
+                {cover && (
                     <Image width={1000} height={122} src={cover} alt=""></Image>
-                )} */}
+                )}
             </section>
             <Main>test</Main>
         </>
