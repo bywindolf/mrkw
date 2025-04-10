@@ -5,21 +5,6 @@
 @import './styles/typography.css';
 @import './styles/components.css';
 
-/* Finally made a utility class! */
-
-@utility dev-color {
-    background-color: var(--dev-color);
-}
-
-@utility my-container {
-    @apply desktop:max-w-desktop gap-fluid dev-color mx-auto w-full;
-}
-@utility grid-12 {
-    @apply dev-color gap-fluid grid grid-cols-12;
-    > * {
-        background-color: var(--dev-color);
-    }
-}
 :root {
     --background: #f4f4f4;
     --foreground: #171717;
@@ -69,18 +54,9 @@
     --step-7: clamp(3.5832rem, 2.9636rem + 3.0978vw, 5.3644rem);
 }
 @theme {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
-    --color-mint-500: oklch(0.72 0.11 178);
-    --color-brand: purple;
-    --color-primary: var(--color-brand);
-
+    --color-brand: blue;
     --container-desktop: 1400px;
-    --grid-gutter: var(--space-s-l, clamp(1rem, 0.4975rem + 2.5126vw, 2.25rem));
-    --gap-fluid: var(--grid-gutter); /* Utopia */
-
     --breakpoint-tablet: 1024px;
-
     --breakpoint-desktop: 1400px;
     --leading-tight: 1;
 }
@@ -90,6 +66,13 @@
     --font-weight-medium: 400;
     --font-mono: var(--font-geist-mono);
     --font-heading: 'Inter Tight';
+
+    --color-primary: var(--color-brand);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+
+    --grid-gutter: var(--space-s-l, clamp(1rem, 0.4975rem + 2.5126vw, 2.25rem));
+    --gap-fluid: var(--grid-gutter); /* Utopia */
 
     /* Simplying our project with on custom breakpoint TailWind class.*/
 }

@@ -34,7 +34,7 @@ export default function Card({ item }: CardProps) {
                     )}
                 </div>
                 {'categories' in item && (
-                    <div className="card__tags">
+                    <div className="card__tags tags">
                         {item.categories.map((cat, index) => (
                             <span key={index} className="tags__item">
                                 {cat}
