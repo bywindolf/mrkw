@@ -1,19 +1,31 @@
 @layer components {
-  .main-menu {
-    @apply overflow-x-scroll  justify-center hidden desktop:block h-screen desktop:h-auto;
-  }
+    .main-menu {
+        @apply desktop:block desktop:h-auto hidden h-screen justify-center overflow-x-scroll;
+    }
 
-  .main-menu__list {
-    @apply flex flex-col desktop:flex-row w-full gap-4;
-  }
-  .main-menu__item {
-    @apply text-lg whitespace-nowrap;
-  }
+    .main-menu__list {
+        @apply desktop:flex-row flex flex-col gap-4;
+    }
+    .main-menu__item {
+        font-size: var(--step--1);
 
-  .main-menu[data-toggle="true"] {
-    @apply absolute left-0 top-0 block w-full bg-amber-200 z-0;
-  }
-  .main-menu[data-toggle="true"] .main-menu__list {
-    @apply flex flex-col;
-  }
+        @apply hover:bg-primary/20 cursor-pointer rounded-full px-2 py-1 whitespace-nowrap;
+    }
+
+    .main-menu__item.active {
+        @apply bg-primary;
+    }
+
+    /* Logic for Main Menu */
+
+    .global-header[data-toggle='true'] {
+        @apply bg-background/20 h-screen backdrop-blur-2xl;
+    }
+
+    .main-menu[data-toggle='true'] {
+        @apply absolute top-0 left-0 z-0 flex w-full flex-col;
+    }
+    .main-menu[data-toggle='true'] .main-menu__list {
+        @apply m-20 flex h-auto flex-col;
+    }
 }

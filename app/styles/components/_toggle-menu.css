@@ -1,0 +1,11 @@
+@layer components {
+    .toggle-menu {
+        @apply desktop:hidden z-2 px-2 py-2 leading-none uppercase;
+    }
+    .toggle-menu[data-toggle='false'] {
+        @apply bg-background rounded-b-full border-2;
+    }
+    .toggle-menu[data-toggle='true'] {
+        @apply bg-green-300; /* Show the button when data-toggle="true" */
+    }
+}

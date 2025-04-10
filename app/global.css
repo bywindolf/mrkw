@@ -5,9 +5,53 @@
 @import './styles/typography.css';
 @import './styles/components.css';
 
+/* Finally made a utility class! */
+
+@utility dev-color {
+    background-color: var(--dev-color);
+}
+
+@utility my-container {
+    @apply desktop:max-w-desktop gap-fluid dev-color mx-auto w-full;
+}
+@utility grid-12 {
+    @apply dev-color gap-fluid grid grid-cols-12;
+    > * {
+        background-color: var(--dev-color);
+    }
+}
 :root {
-    --background: #ffffff;
+    --background: #f4f4f4;
     --foreground: #171717;
+    /* Dev color to hide */
+    --dev-color: rgba(170, 255, 142, 0.037);
+}
+
+/* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,18,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --space-3xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
+    --space-2xs: clamp(0.5rem, 0.4783rem + 0.1087vw, 0.5625rem);
+    --space-xs: clamp(0.75rem, 0.7065rem + 0.2174vw, 0.875rem);
+    --space-s: clamp(1rem, 0.9565rem + 0.2174vw, 1.125rem);
+    --space-m: clamp(1.5rem, 1.4348rem + 0.3261vw, 1.6875rem);
+    --space-l: clamp(2rem, 1.913rem + 0.4348vw, 2.25rem);
+    --space-xl: clamp(3rem, 2.8696rem + 0.6522vw, 3.375rem);
+    --space-2xl: clamp(4rem, 3.8261rem + 0.8696vw, 4.5rem);
+    --space-3xl: clamp(6rem, 5.7391rem + 1.3043vw, 6.75rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.25rem, 0.1413rem + 0.5435vw, 0.5625rem);
+    --space-2xs-xs: clamp(0.5rem, 0.3696rem + 0.6522vw, 0.875rem);
+    --space-xs-s: clamp(0.75rem, 0.6196rem + 0.6522vw, 1.125rem);
+    --space-s-m: clamp(1rem, 0.7609rem + 1.1957vw, 1.6875rem);
+    --space-m-l: clamp(1.5rem, 1.2391rem + 1.3043vw, 2.25rem);
+    --space-l-xl: clamp(2rem, 1.5217rem + 2.3913vw, 3.375rem);
+    --space-xl-2xl: clamp(3rem, 2.4783rem + 2.6087vw, 4.5rem);
+    --space-2xl-3xl: clamp(4rem, 3.0435rem + 4.7826vw, 6.75rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1rem, 0.5652rem + 2.1739vw, 2.25rem);
 }
 
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,18,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -28,31 +72,32 @@
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-mint-500: oklch(0.72 0.11 178);
-    --color-yellow: red;
-
-    --color-primary: var(--color-yellow);
+    --color-brand: green;
+    --color-primary: var(--color-brand);
 
     --container-desktop: 1400px;
-}
+    --grid-gutter: var(--space-s-l, clamp(1rem, 0.4975rem + 2.5126vw, 2.25rem));
+    --gap-fluid: var(--grid-gutter); /* Utopia */
 
-@theme inline {
-    --font-sans: 'Inter';
-    --font-weight-medium: 500;
-    --font-mono: var(--font-geist-mono);
-    --font-heading: 'Inter Tight';
-
-    /* Simplying our project with on custom breakpoint TailWind class.*/
     --breakpoint-tablet: 1024px;
 
     --breakpoint-desktop: 1400px;
     --leading-tight: 1;
 }
 
+@theme inline {
+    --font-sans: 'Inter';
+    --font-weight-medium: 400;
+    --font-mono: var(--font-geist-mono);
+    --font-heading: 'Inter Tight';
+
+    /* Simplying our project with on custom breakpoint TailWind class.*/
+}
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: rgb(36, 36, 36);
-        --foreground: #dedede;
-        --color-primary: rgb(40, 100, 45);
+        --background: rgb(38, 38, 38);
+        --foreground: #f3f3f3;
     }
 }
 

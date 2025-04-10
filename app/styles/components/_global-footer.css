@@ -8,7 +8,7 @@
     .global-footer .logo__image {
     }
     .global-footer__container {
-        @apply max-w-desktop desktop:grid-cols-12 mx-auto grid grid-cols-6 gap-16;
+        @apply grid-12;
     }
     .some__list {
     }

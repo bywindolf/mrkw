@@ -1,4 +1,8 @@
 @import './components/_common.css';
+@import './components/_global-header.css';
+@import './components/_main-menu.css';
+@import './components/_toggle-menu.css';
+
 @import './components/_page-header.css';
 @import './components/_hero.css';
 @import './components/_work.css';
@@ -7,9 +11,5 @@
 @import './components/_experience-list.css';
 @import './components/_page-sub-headline';
 @import './components/_button';
-@import './components/_global-header.css';
-@import './components/_main-menu.css';
-
-@import './components/_toggle-menu-button.css';
 
 @import './components/_global-footer.css';
