@@ -26,11 +26,4 @@
     .experience__skills {
         @apply flex gap-0.5;
     }
-    .tag {
-        font-size: var(--step--2);
-        @apply text-background bg-foreground rounded-3xl border-2 px-2 py-1.5 font-mono font-semibold uppercase opacity-30;
-    }
-    .tag--js {
-        /* @apply bg-amber-500; */
-    }
 }

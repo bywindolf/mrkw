@@ -10,7 +10,7 @@
     h5,
     h6 {
         font-family: var(--font-heading);
-        @apply font-medium;
+        @apply leading-none font-medium;
     }
     h1 {
         font-size: var(--step-5);

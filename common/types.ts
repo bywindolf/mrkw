@@ -8,6 +8,7 @@ export type WorkItem = {
     client?: string
     title?: string
     slug: string
+    categories: string[]
     description?: string
     start?: string
     end?: string
@@ -20,6 +21,7 @@ export type ExperienceItem = {
     company?: string
     slug: string
     description?: string
+    categories: string[]
     role?: string
     start?: string
     end?: string

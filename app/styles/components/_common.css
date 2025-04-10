@@ -1,6 +1,6 @@
 @layer components {
     .logo {
-        @apply text-primary flex items-center gap-3;
+        @apply text-primary z-1 flex items-center gap-3;
     }
     .logo__image {
         @apply h-10 w-10;
@@ -21,5 +21,28 @@
 
     .sub-headline {
         @apply flex justify-center py-16;
+    }
+
+    .tags {
+        @apply flex gap-0.5;
+    }
+
+    .tags__item {
+        font-size: var(--step--2);
+        @apply text-background bg-foreground rounded-3xl border-2 px-2 py-1.5 font-mono font-semibold uppercase opacity-30;
+    }
+
+    .tag--js {
+        /* @apply bg-amber-500; */
+    }
+
+    .card {
+        @apply block h-full overflow-hidden rounded-2xl bg-amber-400;
+    }
+    .card__image {
+        @apply aspect-[4/3] object-cover;
+    }
+    .card__content {
+        @apply text-background p-4;
     }
 }

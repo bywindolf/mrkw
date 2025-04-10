@@ -5,7 +5,7 @@ import React from 'react'
 
 // Moved WorkProps
 import { WorkProps, WorkItem, ExperienceItem } from '@/common/types'
-import WorkCard from './work-card'
+import WorkCard from './card'
 import ExperienceCard from './experience-card'
 
 export default function Work({ type = 'work' }: WorkProps) {

@@ -30,24 +30,41 @@ export default async function SingleWork({ params }: SingleWorkProps) {
                                 <h2 className="header__title">{page.title}</h2>
                             </div>
                             <div className="workinfo__details">
-                                <ul className="workinfo__categories">
-                                    <li>Category A</li>
-                                    <li>Category B</li>
-                                </ul>
-                                <p className="workinfo__timespan">20XX</p>
+                                <div className="tags">
+                                    {page.categories &&
+                                        page.categories.map(
+                                            (cat: string, index: number) => (
+                                                <span
+                                                    key={index}
+                                                    className="tags__item"
+                                                >
+                                                    {cat}
+                                                </span>
+                                            )
+                                        )}
+                                </div>
+                                {page.year && (
+                                    <p className="workinfo__timespan">
+                                        {page.year}
+                                    </p>
+                                )}
                             </div>
                         </div>
-                        <div className="workinfo__description">
-                            {page.description}
-                        </div>
+                        {page.description && (
+                            <div
+                                className="workinfo__description"
+                                dangerouslySetInnerHTML={{
+                                    __html: page.description,
+                                }}
+                            />
+                        )}
                     </div>
                 </section>
                 <div className="my-container">
-                    {' '}
                     {cover && (
                         <Image
-                            width={1000}
-                            height={122}
+                            width={1400}
+                            height={1200}
                             src={cover}
                             alt=""
                         ></Image>

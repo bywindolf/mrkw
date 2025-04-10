@@ -24,7 +24,7 @@
     --background: #f4f4f4;
     --foreground: #171717;
     /* Dev color to hide */
-    --dev-color: rgba(170, 255, 142, 0.037);
+    /* --dev-color: rgba(170, 255, 142, 0.037); */
 }
 
 /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,18,1.25,7,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -72,7 +72,7 @@
     --color-background: var(--background);
     --color-foreground: var(--foreground);
     --color-mint-500: oklch(0.72 0.11 178);
-    --color-brand: green;
+    --color-brand: purple;
     --color-primary: var(--color-brand);
 
     --container-desktop: 1400px;
