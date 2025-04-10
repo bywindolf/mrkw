@@ -1,3 +1,4 @@
+import React from 'react'
 import Link from 'next/link'
 import Main from './components/main'
 import PageSubHeadline from './components/page-sub-headline'
@@ -9,8 +10,7 @@ export default function Home() {
             <Main>
                 <Hero>
                     <h1>
-                        Digital designer embrazing a updated role as frontend
-                        developer.
+                        Digigner embrazing a updated role as frontend developer.
                     </h1>
                     <p>Littery have beend coding since the age of MS-Dos.</p>
                     <Link href="/experience" className="button">

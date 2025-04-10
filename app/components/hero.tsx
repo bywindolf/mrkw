@@ -1,8 +1,10 @@
-//Component: Hero
+import React, { ReactNode } from 'react'
 
-import React, { PropsWithChildren } from 'react'
+interface HeroProps {
+    children: ReactNode
+}
 
-export default function Hero({ children }: PropsWithChildren) {
+export default function Hero({ children }: HeroProps) {
     return (
         <section className="hero">
             <div className="hero__container">{children}</div>

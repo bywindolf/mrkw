@@ -1,3 +1,4 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import '../app/global.css'
 import { GlobalHeader } from './components/global-header'
@@ -19,6 +20,7 @@ export default function RootLayout({
             <body>
                 <GlobalHeader />
                 {children}
+
                 <GlobalFooter />
             </body>
         </html>
