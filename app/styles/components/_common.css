@@ -1,6 +1,6 @@
 @layer components {
     .logo {
-        @apply flex items-center gap-3 text-amber-300;
+        @apply text-primary flex items-center gap-3;
     }
     .logo__image {
         @apply h-10 w-10;
@@ -18,6 +18,7 @@
             @apply font-sans text-3xl text-black;
         }
     }
+
     .sub-headline {
         @apply flex justify-center py-16;
     }

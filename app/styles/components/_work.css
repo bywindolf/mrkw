@@ -2,19 +2,22 @@
     .work {
     }
     .work__list {
-        @apply max-w-desktop mx-auto grid grid-cols-12;
+        @apply grid-12 my-container grid;
     }
     .work__item {
         @apply tablet:col-span-6 desktop:col-span-4 col-span-12;
     }
 
     .workinfo {
-        @apply bg-amber-400 pt-40 pb-20;
+        @apply pt-40 pb-20;
     }
     .workinfo__container {
-        @apply container mx-auto h-[20rem];
+        @apply grid-12 my-container h-[20rem];
     }
     .workinfo__info {
-        @apply flex h-full flex-col justify-between;
+        @apply col-span-6 flex h-full flex-col justify-between;
+    }
+    .workinfo__description {
+        @apply col-span-6;
     }
 }

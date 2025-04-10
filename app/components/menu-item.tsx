@@ -1,16 +1,21 @@
-import Link from "next/link";
-import React from "react";
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import React from 'react'
 
 type MenuItemProps = {
-  children?: React.ReactNode;
-  className: string;
-  url: string;
-};
+    children?: React.ReactNode
+    className: string
+    url: string
+}
 
 export default function MenuItem({ url, children, className }: MenuItemProps) {
-  return (
-    <li className={className}>
-      <Link href={url}>{children}</Link>
-    </li>
-  );
+    const pathname = usePathname()
+    const isActive = pathname.startsWith(url)
+
+    const newClass = `${className} ${isActive ? 'active' : ''}`
+    return (
+        <li className={newClass}>
+            <Link href={url}>{children}</Link>
+        </li>
+    )
 }
