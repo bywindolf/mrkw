@@ -9,7 +9,6 @@
         "lint": "next lint"
     },
     "dependencies": {
-        "@svgr/webpack": "^8.1.0",
         "date-fns": "^4.1.0",
         "firebase": "^11.6.0",
         "firebase-admin": "^13.2.0",
@@ -21,6 +20,7 @@
     "devDependencies": {
         "@babel/plugin-transform-runtime": "^7.26.10",
         "@eslint/eslintrc": "^3",
+        "@svgr/webpack": "^8.1.0",
         "@tailwindcss/postcss": "^4",
         "@types/node": "^20",
         "@types/react": "^19.1.0",

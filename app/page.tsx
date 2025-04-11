@@ -10,7 +10,8 @@ export default function Home() {
             <Main>
                 <Hero>
                     <h1>
-                        Designer embrazing a updated role as frontend developer.
+                        ?Designer embrazing a updated role as frontend
+                        developer.
                     </h1>
                     <p>Ok</p>
                     <Link href="/experience" className="button">
