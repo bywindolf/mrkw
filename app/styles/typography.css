@@ -9,8 +9,7 @@
     h4,
     h5,
     h6 {
-        font-family: var(--font-heading);
-        @apply leading-none font-medium;
+        @apply font-heading leading-none font-medium tracking-wide;
     }
     h1 {
         font-size: var(--step-5);
@@ -18,6 +17,7 @@
     }
     h2 {
         font-size: var(--step-3);
+        @apply font-heading text-foreground/50;
     }
     h3 {
         font-size: var(--step-4);

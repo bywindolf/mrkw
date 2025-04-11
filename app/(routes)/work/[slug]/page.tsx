@@ -2,14 +2,13 @@ import React from 'react'
 import Main from '@/app/components/main'
 import { db } from '@/lib/firebaseAdmin'
 import Image from 'next/image'
-interface SingleWorkProps {
-    params: {
-        slug: string
-    }
-}
 
-export default async function SingleWork({ params }: SingleWorkProps) {
-    const { slug } = params
+export default async function SingleWork({
+    params,
+}: {
+    params: Promise<{ slug: string }>
+}) {
+    const { slug } = await params
 
     const snapshot = await db.collection('work').where('slug', '==', slug).get()
 

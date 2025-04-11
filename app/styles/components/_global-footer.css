@@ -1,9 +1,15 @@
 @layer components {
     .global-footer {
-        @apply px-8 pb-8;
+        font-size: var(--step--1);
+        @apply desktop:fixed bottom-0 z-10 w-full px-8 pb-8;
+    }
+    .global-footer .branding {
+        @apply text-muted;
     }
     .global-footer .logo {
-        @apply text-blue-800;
+        @apply text-amber-500;
+    }
+    .global-footer .logo {
     }
     .global-footer .logo__image {
     }
