@@ -1,5 +1,5 @@
+//Hero Component
 import React, { ReactNode } from 'react'
-
 interface HeroProps {
     children: ReactNode
 }
