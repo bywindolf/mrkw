@@ -1,8 +1,8 @@
 import React from 'react'
 // import type { Metadata } from 'next'
 import '../app/global.css'
-import { GlobalHeader } from './components/global-header'
-import { GlobalFooter } from './components/global-footer'
+import GlobalHeader from './components/global-header'
+import GlobalFooter from './components/global-footer'
 // import { db } from '@/lib/firebaseAdmin'
 
 // Need to fix SEO dynamically. Have to dig deeper in Documentation
@@ -29,7 +29,6 @@ export default async function RootLayout({
             <body>
                 <GlobalHeader />
                 {children}
-
                 <GlobalFooter />
             </body>
         </html>

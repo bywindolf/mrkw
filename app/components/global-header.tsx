@@ -6,7 +6,7 @@ import MainMenu from './main-menu'
 import Logo from './logo'
 import Togglemenu from './toggle-menu'
 
-export function GlobalHeader() {
+export default function GlobalHeader() {
     //To hold states for our Toggle
     const [menuVisible, setMenuVisible] = useState(false)
     return (

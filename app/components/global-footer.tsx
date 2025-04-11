@@ -1,6 +1,6 @@
 import React from 'react'
 
-export function GlobalFooter() {
+export default function GlobalFooter() {
     return (
         <footer className="global-footer">
             <div className="global-footer__container">
