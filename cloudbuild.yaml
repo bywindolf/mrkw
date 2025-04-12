@@ -9,7 +9,7 @@ steps:
 
 # Logging configuration (change according to your needs)
 options:
-    logging: 'CLOUD_LOGGING_ONLY' # Logs only in Cloud Logging
+    logging: 'NONE' # Logs only in Cloud Logging
     # Or specify a log bucket:
     # logging: 'REGIONAL_USER_OWNED_BUCKET'
 
