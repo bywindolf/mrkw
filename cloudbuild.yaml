@@ -33,11 +33,12 @@ steps:
 images:
     - 'gcr.io/$PROJECT_ID/my-app'
 
-# Logging configuration
+# Logging configuration (Use one of these)
 options:
-    logging: 'CLOUD_LOGGING_ONLY' # Logs only in Cloud Logging
-    # Or, you could use:
-    # logging: 'NONE'  # To disable logging altogether
+    logging: 'NONE' # Logs only in Cloud Logging
+    # OR use REGIONAL_USER_OWNED_BUCKET to specify a bucket for logs
+    # logging: 'REGIONAL_USER_OWNED_BUCKET'
+    # logsBucket: 'gs://your-log-bucket'  # specify a log bucket here
 
 # Optionally, specify the service account to use
 serviceAccount: 'firebase-adminsdk-fbsvc@personal-2025-e1099.iam.gserviceaccount.com'
