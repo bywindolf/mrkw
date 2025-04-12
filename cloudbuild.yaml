@@ -7,18 +7,37 @@ steps:
           - 'gcr.io/$PROJECT_ID/my-app'
           - '.'
 
-# Logging configuration (change according to your needs)
+    # Push the Docker image to Google Container Registry
+    - name: 'gcr.io/cloud-builders/docker'
+      args:
+          - 'push'
+          - 'gcr.io/$PROJECT_ID/my-app'
+
+    # Deploy to Cloud Run
+    - name: 'gcr.io/cloud-builders/gcloud'
+      args:
+          [
+              'run',
+              'deploy',
+              'my-app',
+              '--image',
+              'gcr.io/$PROJECT_ID/my-app',
+              '--region',
+              'us-central1',
+              '--platform',
+              'managed',
+              '--quiet',
+              '--allow-unauthenticated',
+          ]
+
+images:
+    - 'gcr.io/$PROJECT_ID/my-app'
+
+# Logging configuration
 options:
-    logging: 'NONE' # Logs only in Cloud Logging
-    # Or specify a log bucket:
-    # logging: 'REGIONAL_USER_OWNED_BUCKET'
-
-# Optionally, you can define substitutions if needed
-# substitutions:
-#   _MY_VARIABLE: 'some_value'
-
-# Timeout setting, can be adjusted based on your build process
-timeout: '1200s' # 20 minutes, for example
+    logging: 'CLOUD_LOGGING_ONLY' # Logs only in Cloud Logging
+    # Or, you could use:
+    # logging: 'NONE'  # To disable logging altogether
 
 # Optionally, specify the service account to use
 serviceAccount: 'firebase-adminsdk-fbsvc@personal-2025-e1099.iam.gserviceaccount.com'
