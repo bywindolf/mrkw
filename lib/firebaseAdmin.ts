@@ -12,8 +12,13 @@ async function getFirebaseCredentials() {
     // Fetch the secret version
     const [version] = await client.accessSecretVersion({ name: secretName })
 
+    // Ensure version.payload is not null or undefined
+    if (!version.payload || !version.payload.data) {
+        throw new Error('Failed to retrieve valid secret payload.')
+    }
+
     // Get the payload (secret content)
-    const payload = version.payload.data.toString('utf8')
+    const payload = version.payload.data.toString() // No need for 'utf8'
 
     // Parse the JSON content of the secret
     return JSON.parse(payload)
@@ -32,4 +37,4 @@ async function initializeFirebase() {
 }
 
 // Initialize Firestore
-export const db = await initializeFirebase() // Use await here to get Firestore instance directly
+export const db = await initializeFirebase()
