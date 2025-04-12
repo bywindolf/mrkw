@@ -32,4 +32,4 @@ async function initializeFirebase() {
 }
 
 // Initialize Firestore
-export const db = initializeFirebase()
+export const db = await initializeFirebase() // Use await here to get Firestore instance directly
