@@ -1,0 +1,24 @@
+steps:
+    # Step to build the Docker image
+    - name: 'gcr.io/cloud-builders/docker'
+      args:
+          - 'build'
+          - '-t'
+          - 'gcr.io/$PROJECT_ID/my-app'
+          - '.'
+
+# Logging configuration (change according to your needs)
+options:
+    logging: 'CLOUD_LOGGING_ONLY' # Logs only in Cloud Logging
+    # Or specify a log bucket:
+    # logging: 'REGIONAL_USER_OWNED_BUCKET'
+
+# Optionally, you can define substitutions if needed
+# substitutions:
+#   _MY_VARIABLE: 'some_value'
+
+# Timeout setting, can be adjusted based on your build process
+timeout: '1200s' # 20 minutes, for example
+
+# Optionally, specify the service account to use
+serviceAccount: 'firebase-adminsdk-fbsvc@personal-2025-e1099.iam.gserviceaccount.com'
