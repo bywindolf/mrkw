@@ -35,7 +35,7 @@ images:
 
 # Logging configuration (Use one of these)
 options:
-    logging: 'NONE' # Logs only in Cloud Logging
+    logging: 'CLOUD_LOGGING_ONLY' # Logs only in Cloud Logging
     # OR use REGIONAL_USER_OWNED_BUCKET to specify a bucket for logs
     # logging: 'REGIONAL_USER_OWNED_BUCKET'
     # logsBucket: 'gs://your-log-bucket'  # specify a log bucket here
