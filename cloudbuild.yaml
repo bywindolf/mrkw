@@ -35,7 +35,7 @@ images:
 
 # Logging configuration
 options:
-    logging: 'CLOUD_LOGGING_ONLY' # Logs only in Cloud Logging
+    logging: 'NONE' # Logs only in Cloud Logging
     # Or, you could use:
     # logging: 'NONE'  # To disable logging altogether
 
