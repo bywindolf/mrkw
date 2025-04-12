@@ -27,3 +27,5 @@ The project is deployed on **Google Cloud**. The deployment workflow ensures:
 1. **Feature branches** → Merged into `dev `for staging.
 2. **Dev branch** → Merged into `main` for production.
 3. **CI/CD** automates the deployment process.
+
+##trigger
