@@ -1,6 +1,6 @@
 FROM node:lts-alpine AS base
 
-# Stage 1: Install dependencies
+# Stage 1: Install dependencies #
 FROM base AS deps
 WORKDIR /app
 COPY package.json pnpm-lock.yaml ./
