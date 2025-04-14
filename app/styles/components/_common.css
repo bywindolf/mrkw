@@ -8,9 +8,6 @@
     .logo__text {
         @apply leading-none;
     }
-    .main {
-        @apply flex flex-col px-8 pt-24 pb-24 align-middle;
-    }
 
     .header {
         @apply flex w-full items-center justify-center py-16;

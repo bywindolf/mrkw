@@ -1,9 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
 import Main from '@components/layout/main'
-import PageSubHeadline from '@components/sections/page-sub-headline'
 import Hero from '@components/sections/hero'
-import Work from '@components/sections/work'
+import FeaturedWorks from '@components/sections/featured-works'
 
 export default function Home() {
     return (
@@ -20,10 +19,8 @@ export default function Home() {
                 </Link>
             </Hero>
             <Main>
-                <PageSubHeadline>Featured works</PageSubHeadline>
+                <FeaturedWorks />
             </Main>
-
-            <Work colSpan="4" isFeatured></Work>
         </>
     )
 }

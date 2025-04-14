@@ -12,18 +12,12 @@ import { fetchWork } from '@/common/utils'
 export default async function Work({ isFeatured, colSpan = '' }: WorkProps) {
     const items = await fetchWork({ isFeatured })
     return (
-        <section className={`work`}>
-            <div className={`work__container`}>
-                <ul
-                    className={`work__list${colSpan ? ` cols-${colSpan}` : ''}`}
-                >
-                    {items.map((item) => (
-                        <li key={item.id} className={`work__item`}>
-                            <Card item={item as WorkItem} />
-                        </li>
-                    ))}
-                </ul>
-            </div>
-        </section>
+        <ul className={`work__list${colSpan ? ` cols-${colSpan}` : ''}`}>
+            {items.map((item) => (
+                <li key={item.id} className={`work__item`}>
+                    <Card item={item as WorkItem} />
+                </li>
+            ))}
+        </ul>
     )
 }

@@ -29,10 +29,13 @@ export default async function CMSPage({
 
     return (
         <main>
-            <PageHeader>About</PageHeader>
+            <PageHeader>{page.title}</PageHeader>
+
             <Main>
-                <h1 className="text-4xl font-bold">{page.title}</h1>
-                {/* Other page content */}
+                <div
+                    className="my-container"
+                    dangerouslySetInnerHTML={{ __html: page.content }}
+                ></div>
             </Main>
         </main>
     )

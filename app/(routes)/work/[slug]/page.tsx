@@ -2,6 +2,9 @@ import React from 'react'
 import Main from '@components/layout/main'
 import Image from 'next/image'
 import { fetchSingleWork } from '@/common/utils'
+import PageSubHeadline from '@components/sections/page-sub-headline'
+import Work from '@components/sections/work'
+import FeaturedWorks from '@components/sections/featured-works'
 
 export default async function SingleWork({
     params,
@@ -67,6 +70,7 @@ export default async function SingleWork({
                         ></Image>
                     )}
                 </div>
+                <FeaturedWorks></FeaturedWorks>
             </Main>
         </>
     )
