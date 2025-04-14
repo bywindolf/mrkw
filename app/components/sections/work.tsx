@@ -4,19 +4,21 @@
 import React from 'react'
 
 // Moved WorkProps
-import { WorkProps, WorkItem } from '@/common/types'
+import { WorkItem, WorkProps } from '@/common/types'
 import Card from '@components/ui/card'
 import { fetchWork } from '@/common/utils'
 // import ExperienceCard from './experience-card'
 
-export default async function Work({ type = 'work' }: WorkProps) {
-    const items = await fetchWork()
+export default async function Work({ isFeatured, colSpan = '' }: WorkProps) {
+    const items = await fetchWork({ isFeatured })
     return (
-        <section className={`${type}`}>
-            <div className={`${type}__container`}>
-                <ul className={`${type}__list`}>
+        <section className={`work`}>
+            <div className={`work__container`}>
+                <ul
+                    className={`work__list${colSpan ? ` cols-${colSpan}` : ''}`}
+                >
                     {items.map((item) => (
-                        <li key={item.id} className={`${type}__list-item`}>
+                        <li key={item.id} className={`work__item`}>
                             <Card item={item as WorkItem} />
                         </li>
                     ))}

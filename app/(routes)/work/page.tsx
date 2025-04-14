@@ -6,7 +6,7 @@ import Main from '@components/layout/main'
 import { fetchWork } from '@/common/utils'
 
 export default async function page() {
-    const workData = await fetchWork()
+    const workData = await fetchWork({})
 
     return (
         <>

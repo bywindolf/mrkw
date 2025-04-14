@@ -24,6 +24,8 @@ export default async function RootLayout({
 }: Readonly<{
     children: React.ReactNode
 }>) {
+    //Get slug for page, if not slug, front page
+
     return (
         <html lang="en">
             <body>

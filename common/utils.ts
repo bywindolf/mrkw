@@ -2,15 +2,20 @@ import { WorkItem, ExperienceItem } from './types'
 import { db } from '@/lib/firebaseAdmin'
 import { notFound } from 'next/navigation'
 
-export const fetchWork = async (isFeatured?: boolean) => {
-    //Fetch our Work collection from Firebase (DB)
+interface FetchWorkOptions {
+    isFeatured?: boolean
+}
 
+export const fetchWork = async (options: FetchWorkOptions) => {
+    //Fetch our Work collection from Firebase (DB)
+    //Fetch ALL
     let workSnapshot = await db.collection('work').get()
 
-    if (isFeatured !== undefined) {
+    //IF isFeatured is passed
+    if (options?.isFeatured !== undefined) {
         workSnapshot = await db
             .collection('work')
-            .where('isFeatured', '==', isFeatured)
+            .where('featured', '==', options.isFeatured)
             .get()
     }
 

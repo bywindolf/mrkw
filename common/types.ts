@@ -1,20 +1,21 @@
 // For portfolio related tasks (Kristoffer)
 export type WorkProps = {
-    type: 'work' | 'experience'
+    colSpan?: string
+    isFeatured?: boolean
 }
 
 export type WorkItem = {
-    id: number | string
+    id?: number | string
     client?: string
     title?: string
-    slug: string
-    categories: string[]
+    slug?: string
+    categories?: string[]
     description?: string
     start?: string
     end?: string
     skills?: string[]
     isFeatured?: boolean
-    cover: { downloadURL: string }[]
+    cover?: { downloadURL: string }[]
 }
 
 export type ExperienceItem = {
