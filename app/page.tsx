@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import Main from './components/main'
-import PageSubHeadline from './components/page-sub-headline'
-import Hero from './components/hero'
+import Main from './components/layout/main'
+import PageSubHeadline from './components/sections/page-sub-headline'
+import Hero from './components/sections/hero'
 
 export default function Home() {
     return (

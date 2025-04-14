@@ -1,10 +1,10 @@
 import { db } from '@/lib/firebaseAdmin' // import the initialized Firebase Admin SDK
 import React from 'react'
-import PageHeader from '../../components/page-header'
-import Main from '../../components/main'
-import PageSubHeadline from '../../components/page-sub-headline'
+import PageHeader from '@components/sections/page-header'
+import Main from '@components/layout/main'
+import PageSubHeadline from '@components/sections/page-sub-headline'
 import { ExperienceItem } from '@/common/types'
-import ExperienceCard from '../../components/experience-card'
+import ExperienceCard from '@components/ui/experience-card'
 // import { fetchDevProfile } from "@/common/actions";
 
 export default async function Experience() {

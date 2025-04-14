@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Main from './components/main'
+import Main from './components/layout/main'
 
 export default async function NotFound() {
     return (

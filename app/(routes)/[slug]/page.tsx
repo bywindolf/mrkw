@@ -1,8 +1,8 @@
 import React from 'react'
 import { db } from '@/lib/firebaseAdmin' // your admin Firestore
 import { notFound } from 'next/navigation'
-import PageHeader from '@/app/components/page-header'
-import Main from '@/app/components/main'
+import PageHeader from '@components/sections/page-header'
+import Main from '@components/layout/main'
 
 export default async function CMSPage({
     params,

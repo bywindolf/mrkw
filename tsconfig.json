@@ -21,7 +21,9 @@
                 "name": "next"
             }
         ],
+        "baseUrl": "./",
         "paths": {
+            "@components/*": ["app/components/*"], // Alias @components to src/components
             "@/*": ["./*"]
         }
     },

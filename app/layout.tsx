@@ -1,8 +1,8 @@
 import React from 'react'
 // import type { Metadata } from 'next'
-import '../app/global.css'
-import GlobalHeader from './components/global-header'
-import GlobalFooter from './components/global-footer'
+import '@/app/global.css'
+import GlobalHeader from '@components/layout/global-header'
+import GlobalFooter from '@components/layout/global-footer'
 // import { db } from '@/lib/firebaseAdmin'
 
 // Need to fix SEO dynamically. Have to dig deeper in Documentation
