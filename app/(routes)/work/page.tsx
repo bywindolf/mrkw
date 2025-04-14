@@ -1,17 +1,12 @@
 import React from 'react'
 import PageHeader from '@components/sections/page-header'
-import { db } from '@/lib/firebaseAdmin'
-import { WorkItem } from '@/common/types'
+
 import Card from '@components/ui/card'
 import Main from '@components/layout/main'
+import { fetchWork } from '@/common/utils'
 
 export default async function page() {
-    //Fetch our Work collection from Firebase (DB)
-    const workSnapshot = await db.collection('work').get()
-    const workData = workSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...(doc.data() as Omit<WorkItem, 'id'>), // assuming id comes from doc.id
-    }))
+    const workData = await fetchWork()
 
     return (
         <>

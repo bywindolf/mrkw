@@ -1,8 +1,7 @@
 import React from 'react'
-import { db } from '@/lib/firebaseAdmin'
-import { notFound } from 'next/navigation'
 import Main from '@components/layout/main'
 import Image from 'next/image'
+import { fetchSingleWork } from '@/common/utils'
 
 export default async function SingleWork({
     params,
@@ -11,21 +10,7 @@ export default async function SingleWork({
 }) {
     const { slug } = await params
 
-    const snapshot = await db
-        .collection('work')
-        .where('slug', '==', slug)
-        .limit(1)
-        .get()
-
-    // console.log(page)
-    // Check cover, if missing return null
-
-    if (snapshot.empty) {
-        console.error('No page found for this slug:', slug)
-        notFound() // Show Next.js 404
-    }
-
-    const page = snapshot.docs.map((doc) => doc.data())[0]
+    const page = await fetchSingleWork(slug)
 
     const cover = page.cover?.[0]?.downloadURL || null
 
