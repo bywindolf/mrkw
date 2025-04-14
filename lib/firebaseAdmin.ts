@@ -21,6 +21,8 @@ async function getFirebaseCredentials() {
     const payload = version.payload.data.toString() // No need for 'utf8'
 
     // Parse the JSON content of the secret
+
+    console.log(payload)
     return JSON.parse(payload)
 }
 

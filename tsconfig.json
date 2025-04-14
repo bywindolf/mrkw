@@ -32,7 +32,8 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "next.config.js"
+        "next.config.js",
+        "lib/firebaseAdminTest.js"
     ],
     "exclude": ["node_modules"]
 }
