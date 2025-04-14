@@ -12,7 +12,7 @@ This is the final assignment for the **Frontend Developer React** course. This p
 
 ## Project Structure
 
-This portfolio follows a structured approach using \***\*BEM class naming** and component-based architecture. Each component has a default className\*\* for global styling and is broken into modular CSS files for maintainability.
+This portfolio follows a structured approach using **BEM class naming** and component-based architecture. Each component has a default className for global styling and is broken into modular CSS files for maintainability.
 
 ## Feature Branch Workflow
 
