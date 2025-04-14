@@ -3,8 +3,10 @@ import Link from 'next/link'
 import Main from '@components/layout/main'
 import PageSubHeadline from '@components/sections/page-sub-headline'
 import Hero from '@components/sections/hero'
+import { fetchWork } from '@/common/utils'
 
-export default function Home() {
+export default async function Home() {
+    const work = await fetchWork()
     return (
         <>
             <Main>
@@ -20,6 +22,12 @@ export default function Home() {
                 </Hero>
                 <PageSubHeadline>Featured works</PageSubHeadline>
             </Main>
+
+            <ul>
+                {work.map((item) => (
+                    <li key={item.id}>{item.title}</li>
+                ))}
+            </ul>
         </>
     )
 }

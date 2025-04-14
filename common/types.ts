@@ -13,6 +13,7 @@ export type WorkItem = {
     start?: string
     end?: string
     skills?: string[]
+    isFeatured?: boolean
     cover: { downloadURL: string }[]
 }
 
