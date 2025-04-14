@@ -2,9 +2,9 @@
 //Component GlobalHeader
 
 import React, { useState } from 'react'
-import MainMenu from './main-menu'
-import Logo from './logo'
-import Togglemenu from './toggle-menu'
+import Logo from '@components/ui/logo'
+import MainMenu from '@components/layout/main-menu'
+import Togglemenu from '@components/ui/toggle-menu'
 
 export default function GlobalHeader() {
     //To hold states for our Toggle

@@ -1,5 +1,5 @@
 import React from 'react'
-import MenuItem from './menu-item'
+import MenuItem from '@components/layout/menu-item'
 
 const menuData = [
     {

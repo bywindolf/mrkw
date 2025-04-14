@@ -1,7 +1,7 @@
 import React from 'react'
 import { db } from '@/lib/firebaseAdmin'
 import { notFound } from 'next/navigation'
-import Main from '@/app/components/main'
+import Main from '@components/layout/main'
 import Image from 'next/image'
 
 export default async function SingleWork({
