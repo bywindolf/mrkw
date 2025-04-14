@@ -55,7 +55,7 @@
     --step-7: clamp(3.5832rem, 2.9636rem + 3.0978vw, 5.3644rem);
 }
 @theme {
-    --color-brand: blue;
+    --color-brand: yellow;
     --container-desktop: 1400px;
     --breakpoint-tablet: 1024px;
     --breakpoint-desktop: 1400px;

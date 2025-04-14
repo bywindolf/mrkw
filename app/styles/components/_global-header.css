@@ -15,4 +15,12 @@
     .global-header__actions {
         @apply z-20 flex gap-4;
     }
+
+    /* Home */
+    .home.global-header .logo {
+        @apply text-background;
+    }
+    .home .main-menu__item {
+        @apply text-background;
+    }
 }
