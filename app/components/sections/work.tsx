@@ -1,29 +1,29 @@
-// //Component: Work..
-// //Want to make this component to be "smart" and make use of prop defining what kind of "list" we should serve
+//Component: Work..
+//Want to make this component to be "smart" and make use of prop defining what kind of "list" we should serve
 
-// import React from 'react'
+import React from 'react'
 
-// // Moved WorkProps
-// import { WorkProps, WorkItem, ExperienceItem } from '@/common/types'
-// import WorkCard from './card'
+// Moved WorkProps
+import { WorkItem, WorkProps } from '@/common/types'
+import Card from '@components/ui/card'
+import { fetchWork } from '@/common/utils'
 // import ExperienceCard from './experience-card'
 
-// export default function Work({ type = 'work' }: WorkProps) {
-//     return (
-//         <section className={`${type}`}>
-//             <div className={`${type}__container`}>
-//                 <ul className={`${type}__list`}>
-//                     {items.map((item) => (
-//                         <li key={item.id} className={`${type}__list-item`}>
-//                             {type === 'work' ? (
-//                                 <WorkCard item={item as WorkItem} />
-//                             ) : (
-//                                 <ExperienceCard item={item as ExperienceItem} />
-//                             )}
-//                         </li>
-//                     ))}
-//                 </ul>
-//             </div>
-//         </section>
-//     )
-// }
+export default async function Work({ isFeatured, colSpan = '' }: WorkProps) {
+    const items = await fetchWork({ isFeatured })
+    return (
+        <section className={`work`}>
+            <div className={`work__container`}>
+                <ul
+                    className={`work__list${colSpan ? ` cols-${colSpan}` : ''}`}
+                >
+                    {items.map((item) => (
+                        <li key={item.id} className={`work__item`}>
+                            <Card item={item as WorkItem} />
+                        </li>
+                    ))}
+                </ul>
+            </div>
+        </section>
+    )
+}
