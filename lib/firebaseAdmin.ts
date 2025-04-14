@@ -22,7 +22,7 @@ async function getFirebaseCredentials() {
 
     // Parse the JSON content of the secret
 
-    console.log(payload)
+    // console.log(payload)
     return JSON.parse(payload)
 }
 
