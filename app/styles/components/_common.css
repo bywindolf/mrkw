@@ -37,7 +37,7 @@
         @apply flex h-full flex-col gap-4 overflow-hidden;
     }
     .card__image {
-        @apply bg-primary aspect-[4/3] w-full object-cover;
+        @apply aspect-[3/2] w-full rounded-xl bg-gray-600 object-cover;
     }
     .card__info {
         @apply flex items-center gap-2;

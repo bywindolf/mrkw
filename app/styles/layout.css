@@ -9,7 +9,7 @@
     }
 
     .main {
-        @apply flex flex-col gap-20 px-8 pt-24 pb-24 align-middle;
+        @apply px-body flex flex-col gap-20 pt-20 pb-24 align-middle;
     }
 }
 

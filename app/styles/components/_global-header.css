@@ -1,6 +1,6 @@
 @layer components {
     .global-header {
-        @apply fixed z-1 h-auto w-full p-8;
+        @apply px-body fixed z-1 h-auto w-full p-8;
     }
 
     .global-header__container {

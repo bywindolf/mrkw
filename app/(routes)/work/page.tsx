@@ -10,9 +10,9 @@ export default async function page() {
 
     return (
         <>
-            <PageHeader>Work</PageHeader>
-
             <Main>
+                <PageHeader>Work</PageHeader>
+
                 <section className="work">
                     <ul className="work__list">
                         {workData.map((item) => (

@@ -12,9 +12,9 @@ export default async function Experience() {
 
     return (
         <>
-            <PageHeader>Experience</PageHeader>
-
             <Main>
+                <PageHeader>Experience</PageHeader>
+
                 <PageSubHeadline>Professional</PageSubHeadline>
                 <ul className="experience__list">
                     {experienceData.map((item) => (

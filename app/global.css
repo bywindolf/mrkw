@@ -55,7 +55,7 @@
     --step-7: clamp(3.5832rem, 2.9636rem + 3.0978vw, 5.3644rem);
 }
 @theme {
-    --color-brand: yellow;
+    --color-brand: pink;
     --container-desktop: 1400px;
     --breakpoint-tablet: 1024px;
     --breakpoint-desktop: 1400px;
@@ -86,9 +86,14 @@
     --color-foreground: var(--foreground);
     --color-muted: var(--muted);
 
-    --grid-gutter: var(--space-s-l, clamp(1rem, 0.4975rem + 2.5126vw, 2.25rem));
+    --grid-gutter: var(
+        --space-m-2xl,
+        clamp(1.5rem, 0.7405rem + 3.7975vw, 4.5rem)
+    );
     --gap-fluid: var(--grid-gutter); /* Utopia */
-
+    --padding-body: var(
+        --grid-gutter
+    ); /* Space l/r body
     /* Simplying our project with on custom breakpoint TailWind class.*/
 }
 

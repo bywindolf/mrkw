@@ -3,11 +3,11 @@
         @apply grid-12 my-container;
     }
     .work__item {
-        @apply tablet:col-span-6 desktop:col-span-4 col-span-12;
+        @apply tablet:col-span-6 desktop:col-span-6 col-span-12;
     }
 
     .workinfo {
-        @apply pt-40;
+        @apply pt-20;
     }
     .workinfo__container {
         @apply grid-12 my-container h-[20rem];
@@ -19,6 +19,6 @@
         @apply col-span-6;
     }
     .workinfo .header__title {
-        font-size: var(--step-5);
+        font-size: var(--step-4);
     }
 }

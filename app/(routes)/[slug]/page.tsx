@@ -29,9 +29,9 @@ export default async function CMSPage({
 
     return (
         <main>
-            <PageHeader>{page.title}</PageHeader>
-
             <Main>
+                <PageHeader>{page.title}</PageHeader>
+
                 <div
                     className="my-container"
                     dangerouslySetInnerHTML={{ __html: page.content }}

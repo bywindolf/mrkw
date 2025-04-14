@@ -1,6 +1,6 @@
 @layer components {
     .page-header {
-        @apply px-8 pt-40 pb-20;
+        @apply px-8 pt-20 pb-20;
     }
     .page-header__container {
         @apply my-container;

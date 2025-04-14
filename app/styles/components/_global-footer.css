@@ -1,7 +1,7 @@
 @layer components {
     .global-footer {
         font-size: var(--step--1);
-        @apply desktop:fixed bottom-0 z-10 w-full px-8 pb-8;
+        @apply desktop:fixed px-body bottom-0 z-10 w-full pb-8;
     }
     .global-footer .branding {
         @apply text-muted;
