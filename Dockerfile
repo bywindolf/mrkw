@@ -33,7 +33,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/package.json ./package.json
 
 # Set the environment variable for Firebase credentials (this will be injected via Cloud Run at runtime)
-ENV GOOGLE_APPLICATION_CREDENTIALS=/secrets/firebase-service-account.json
+# ENV GOOGLE_APPLICATION_CREDENTIALS=/secrets/firebase-service-account.json
 
 # Expose the port that the app will listen to
 EXPOSE 3000

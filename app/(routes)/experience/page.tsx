@@ -4,7 +4,6 @@ import Main from '@components/layout/main'
 import PageSubHeadline from '@components/sections/page-sub-headline'
 import ExperienceCard from '@components/ui/experience-card'
 import { fetchEducation, fetchExperience } from '@/common/utils'
-// import { fetchDevProfile } from "@/common/actions";
 
 export default async function Experience() {
     const experienceData = await fetchExperience()
