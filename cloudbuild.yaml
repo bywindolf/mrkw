@@ -1,19 +1,15 @@
-substitutions:
-    _GCP_PROJECT_ID: 'your-project-id'
-    _GCP_SERVICE_ACCOUNT_EMAIL: 'your-service-account-email'
-    _GCP_PRIVATE_KEY: 'your-private-key'
-
 steps:
     - name: 'gcr.io/cloud-builders/docker'
       entrypoint: 'bash'
       args:
           - '-c'
           - |
-              docker build \
-                --build-arg GCP_PROJECT_ID=${_GCP_PROJECT_ID} \
-                --build-arg GCP_SERVICE_ACCOUNT_EMAIL=${_GCP_SERVICE_ACCOUNT_EMAIL} \
-                --build-arg GCP_PRIVATE_KEY=${_GCP_PRIVATE_KEY} \
-                -t gcr.io/${PROJECT_ID}/your-image-name .
+              echo "Building Docker Image with GCP Secrets..."
+              docker build
+              --build-arg GCP_PROJECT_ID=${_GCP_PROJECT_ID}
+              --build-arg GCP_SERVICE_ACCOUNT_EMAIL=${_GCP_SERVICE_ACCOUNT_EMAIL}
+              --build-arg GCP_PRIVATE_KEY=${_GCP_PRIVATE_KEY}
+              -t gcr.io/${PROJECT_ID}/your-image-name
       secretEnv:
           - 'GCP_PROJECT_ID'
           - 'GCP_SERVICE_ACCOUNT_EMAIL'
@@ -21,11 +17,11 @@ steps:
 
 availableSecrets:
     secretManager:
-        - versionName: 'projects/your-project-id/secrets/GCP_PROJECT_ID/versions/latest'
+        - versionName: 'projects/personal-2025-e1099/secrets/GCP_PROJECT_ID/versions/latest'
           env: 'GCP_PROJECT_ID'
-        - versionName: 'projects/your-project-id/secrets/GCP_SERVICE_ACCOUNT_EMAIL/versions/latest'
+        - versionName: 'projects/personal-2025-e1099/secrets/GCP_SERVICE_ACCOUNT_EMAIL/versions/latest'
           env: 'GCP_SERVICE_ACCOUNT_EMAIL'
-        - versionName: 'projects/your-project-id/secrets/GCP_PRIVATE_KEY/versions/latest'
+        - versionName: 'projects/personal-2025-e1099/secrets/GCP_PRIVATE_KEY/versions/latest'
           env: 'GCP_PRIVATE_KEY'
 
 options:
