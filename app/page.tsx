@@ -12,7 +12,7 @@ export default function Home() {
                     Designer embrazing a updated role as frontend developer.
                 </h1>
                 <Link href="/experience" className="button">
-                    Hello button
+                    Hello button!
                 </Link>
                 <Link href="/about" className="button">
                     About
