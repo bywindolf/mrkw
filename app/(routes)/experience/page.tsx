@@ -1,38 +1,19 @@
-import { db } from '@/lib/firebaseAdmin' // import the initialized Firebase Admin SDK
 import React from 'react'
-import PageHeader from '../../components/page-header'
-import Main from '../../components/main'
-import PageSubHeadline from '../../components/page-sub-headline'
-import { ExperienceItem } from '@/common/types'
-import ExperienceCard from '../../components/experience-card'
-// import { fetchDevProfile } from "@/common/actions";
+import PageHeader from '@components/sections/page-header'
+import Main from '@components/layout/main'
+import PageSubHeadline from '@components/sections/page-sub-headline'
+import ExperienceCard from '@components/ui/experience-card'
+import { fetchEducation, fetchExperience } from '@/common/utils'
 
 export default async function Experience() {
-    // Firebase way of fetching data for "collections" of data
-    const experienceSnapshot = await db
-        .collection('experience')
-        .orderBy('end', 'desc')
-        .get()
-    const experienceData: ExperienceItem[] = experienceSnapshot.docs.map(
-        (doc) => ({
-            id: doc.id,
-            ...(doc.data() as Omit<ExperienceItem, 'id'>), // assuming id comes from doc.id
-        })
-    )
-
-    const eduationSnapshot = await db.collection('education').get()
-    const educationData: ExperienceItem[] = eduationSnapshot.docs.map(
-        (doc) => ({
-            id: doc.id,
-            ...(doc.data() as Omit<ExperienceItem, 'id'>), // assuming id comes from doc.id
-        })
-    )
+    const experienceData = await fetchExperience()
+    const educationData = await fetchEducation()
 
     return (
         <>
-            <PageHeader>Experience</PageHeader>
-
             <Main>
+                <PageHeader>Experience</PageHeader>
+
                 <PageSubHeadline>Professional</PageSubHeadline>
                 <ul className="experience__list">
                     {experienceData.map((item) => (

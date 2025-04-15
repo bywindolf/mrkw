@@ -61,9 +61,12 @@ export default function ExperienceCard({ item }: CardProps) {
                         className="experience__description"
                         dangerouslySetInnerHTML={{ __html: item.description }}
                     />
-                    <div className="experience__skills">
+                    <div className="tags">
                         {item.skills?.map((skill: string, index) => (
-                            <span className={`tag tag--${skill}`} key={index}>
+                            <span
+                                className={`tags__item tag--${skill}`}
+                                key={index}
+                            >
                                 {skill}
                             </span>
                         ))}

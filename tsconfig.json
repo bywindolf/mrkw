@@ -2,13 +2,16 @@
     "compilerOptions": {
         "target": "ES2017",
         "lib": ["dom", "dom.iterable", "esnext"],
+        // "types": ["next", "react", "react-dom"],
         "allowJs": true,
         "skipLibCheck": true,
         "strict": true,
         "noEmit": true,
         "esModuleInterop": true,
         "module": "esnext",
+        // "moduleResolution": "node",
         "moduleResolution": "bundler",
+
         "resolveJsonModule": true,
         "isolatedModules": true,
         "jsx": "preserve",
@@ -18,7 +21,9 @@
                 "name": "next"
             }
         ],
+        "baseUrl": "./",
         "paths": {
+            "@components/*": ["app/components/*"], // Alias @components to src/components
             "@/*": ["./*"]
         }
     },
@@ -27,8 +32,8 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts",
-        "app/components/_HeaderLink.tsx.disabled",
-        "next.config.js"
+        "next.config.js",
+        "lib/firebaseAdminTest.js"
     ],
     "exclude": ["node_modules"]
 }

@@ -1,7 +1,8 @@
 @layer components {
     .global-header {
-        @apply bg-background fixed z-1 w-full p-8 opacity-90;
+        @apply px-body fixed z-1 h-auto w-full p-8;
     }
+
     .global-header__container {
         @apply mx-auto flex items-center justify-between gap-4;
     }
@@ -14,11 +15,12 @@
     .global-header__actions {
         @apply z-20 flex gap-4;
     }
-    /* Logic for toggle .main-menu */
-    .global-header__container:has(
-            .global-header__actions .toggle-menu-button[data-toggle='false']
-        )
-        .main-menu {
-        @apply desktop:block hidden;
+
+    /* Home */
+    .home.global-header .logo {
+        @apply text-background;
+    }
+    .home .main-menu__item {
+        @apply text-background;
     }
 }
