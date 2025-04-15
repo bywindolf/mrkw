@@ -6,4 +6,4 @@ images:
     - 'gcr.io/$PROJECT_ID/my-image'
 
 options:
-    logging: CLOUD_LOGGING_ONLY
+    logging: NONE
