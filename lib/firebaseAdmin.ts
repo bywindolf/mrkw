@@ -1,42 +1,34 @@
-import { SecretManagerServiceClient } from '@google-cloud/secret-manager'
 import { initializeApp, cert, getApps, getApp } from 'firebase-admin/app'
 import { getFirestore } from 'firebase-admin/firestore'
 
-// Initialize the Secret Manager client
-const client = new SecretManagerServiceClient()
-
-// Fetch the Firebase credentials from Secret Manager
-async function getFirebaseCredentials() {
-    const secretName = `projects/${process.env.GCP_PROJECT_ID}/secrets/firebase-service-account/versions/latest`
-
-    // Fetch the secret version
-    const [version] = await client.accessSecretVersion({ name: secretName })
-
-    // Ensure version.payload is not null or undefined
-    if (!version.payload || !version.payload.data) {
-        throw new Error('Failed to retrieve valid secret payload.')
+// Helper function to retrieve GCP credentials from environment variables
+const getGCPCredentials = () => {
+    if (
+        process.env.GCP_PRIVATE_KEY &&
+        process.env.GCP_SERVICE_ACCOUNT_EMAIL &&
+        process.env.GCP_PROJECT_ID
+    ) {
+        return {
+            clientEmail: process.env.GCP_SERVICE_ACCOUNT_EMAIL,
+            privateKey: process.env.GCP_PRIVATE_KEY.replace(/\\n/g, '\n'),
+            projectId: process.env.GCP_PROJECT_ID,
+        }
+    } else {
+        throw new Error('Missing GCP environment variables.')
     }
-
-    // Get the payload (secret content)
-    const payload = version.payload.data.toString() // No need for 'utf8'
-
-    // Parse the JSON content of the secret
-
-    // console.log(payload)
-    return JSON.parse(payload)
 }
 
-async function initializeFirebase() {
-    // Fetch Firebase credentials from Secret Manager
-    const firebaseAdminConfig = await getFirebaseCredentials()
+// Initialize Firebase
+function initializeFirebase() {
+    const credentials = getGCPCredentials()
 
     const app =
         getApps().length === 0
-            ? initializeApp({ credential: cert(firebaseAdminConfig) })
+            ? initializeApp({ credential: cert(credentials) })
             : getApp()
 
     return getFirestore(app)
 }
 
 // Initialize Firestore
-export const db = await initializeFirebase()
+export const db = initializeFirebase()
