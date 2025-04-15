@@ -1,36 +1,24 @@
-# Stage 1: Base image with build arguments
-FROM node:lts-alpine AS base
+# Step 1: Base Image and Setup
+FROM node:16 AS base
 
-# Define build arguments
-ARG GCP_PROJECT_ID
-ARG GCP_SERVICE_ACCOUNT_EMAIL
-ARG GCP_PRIVATE_KEY
+# Step 2: Set Environment Variables (Optional, for local testing)
+# You can also use this to pass local default values for debugging if needed
+# ENV GCP_PROJECT_ID="your_project_id"
+# ENV GCP_SERVICE_ACCOUNT_EMAIL="your_service_account_email"
+# ENV GCP_PRIVATE_KEY="your_private_key"
 
-# Set environment variables for runtime
-ENV GCP_PROJECT_ID=$GCP_PROJECT_ID
-ENV GCP_SERVICE_ACCOUNT_EMAIL=$GCP_SERVICE_ACCOUNT_EMAIL
-ENV GCP_PRIVATE_KEY=$GCP_PRIVATE_KEY
-ENV NODE_ENV=production
+# Debugging: Print the environment variables to verify they are set correctly
+RUN echo "GCP_PROJECT_ID: $GCP_PROJECT_ID" && \
+    echo "GCP_SERVICE_ACCOUNT_EMAIL: $GCP_SERVICE_ACCOUNT_EMAIL" && \
+    echo "GCP_PRIVATE_KEY: $GCP_PRIVATE_KEY"
 
-# Stage 2: Install dependencies
-FROM base AS deps
+# Rest of your Dockerfile...
+# For example, install dependencies
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
-RUN corepack enable pnpm && pnpm install --frozen-lockfile
-
-# Stage 3: Build the application
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN corepack enable pnpm && pnpm run build
+RUN npm install
 
-# Stage 4: Production server
-FROM base AS runner
-WORKDIR /app
-COPY --from=builder /app/.next/standalone ./
-COPY --from=builder /app/.next/static ./.next/static
-COPY --from=builder /app/public ./public
+# Build your application
+RUN npm run build
 
-EXPOSE 3000
-CMD ["node", "server.js"]
+# Add final steps...
