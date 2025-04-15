@@ -8,7 +8,7 @@ steps:
                 --build-arg GCP_PROJECT_ID=${GCP_PROJECT_ID} \
                 --build-arg GCP_SERVICE_ACCOUNT_EMAIL=${GCP_SERVICE_ACCOUNT_EMAIL} \
                 --build-arg GCP_PRIVATE_KEY=${GCP_PRIVATE_KEY} \
-                -t gcr.io/$PROJECT_ID/your-image-name .
+                -t gcr.io/${PROJECT_ID}/your-image-name .
       secretEnv:
           - 'GCP_PROJECT_ID'
           - 'GCP_SERVICE_ACCOUNT_EMAIL'
