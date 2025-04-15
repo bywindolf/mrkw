@@ -18,11 +18,11 @@ steps:
 
 availableSecrets:
     secretManager:
-        - versionName: projects/personal-2025-e1099/secrets/GCP_PROJECT_ID/versions/latest
+        - versionName: projects/400335864929/secrets/GCP_PROJECT_ID/versions/latest
           env: 'GCP_PROJECT_ID'
-        - versionName: projects/personal-2025-e1099/secrets/GCP_SERVICE_ACCOUNT_EMAIL/versions/latest
+        - versionName: projects/400335864929/secrets/GCP_SERVICE_ACCOUNT_EMAIL/versions/latest
           env: 'GCP_SERVICE_ACCOUNT_EMAIL'
-        - versionName: projects/personal-2025-e1099/secrets/GCP_PRIVATE_KEY/versions/latest
+        - versionName: projects/400335864929/secrets/GCP_PRIVATE_KEY/versions/latest
           env: 'GCP_PRIVATE_KEY'
 
 options:
