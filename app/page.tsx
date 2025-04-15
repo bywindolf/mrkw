@@ -1,5 +1,5 @@
 //https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
-export const dynamic = 'force-auto'
+export const dynamic = 'auto'
 import React from 'react'
 import Link from 'next/link'
 import Main from '@components/layout/main'
