@@ -1,3 +1,8 @@
+substitutions:
+    _GCP_PROJECT_ID: 'your-project-id'
+    _GCP_SERVICE_ACCOUNT_EMAIL: 'your-service-account-email'
+    _GCP_PRIVATE_KEY: 'your-private-key'
+
 steps:
     - name: 'gcr.io/cloud-builders/docker'
       entrypoint: 'bash'
@@ -16,11 +21,11 @@ steps:
 
 availableSecrets:
     secretManager:
-        - versionName: 'projects/personal-2025-e1099/secrets/GCP_PROJECT_ID/versions/latest'
+        - versionName: 'projects/your-project-id/secrets/GCP_PROJECT_ID/versions/latest'
           env: 'GCP_PROJECT_ID'
-        - versionName: 'projects/personal-2025-e1099/secrets/GCP_SERVICE_ACCOUNT_EMAIL/versions/latest'
+        - versionName: 'projects/your-project-id/secrets/GCP_SERVICE_ACCOUNT_EMAIL/versions/latest'
           env: 'GCP_SERVICE_ACCOUNT_EMAIL'
-        - versionName: 'projects/personal-2025-e1099/secrets/GCP_PRIVATE_KEY/versions/latest'
+        - versionName: 'projects/your-project-id/secrets/GCP_PRIVATE_KEY/versions/latest'
           env: 'GCP_PRIVATE_KEY'
 
 options:
