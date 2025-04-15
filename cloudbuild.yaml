@@ -1,9 +1,24 @@
 steps:
     - name: 'gcr.io/cloud-builders/docker'
-      args: ['build', '-t', 'gcr.io/$PROJECT_ID/my-image', '.']
+      entrypoint: 'bash'
+      args:
+          - '-c'
+          - |
+              docker build \
+                --build-arg GCP_PROJECT_ID=$$GCP_PROJECT_ID \
+                --build-arg GCP_SERVICE_ACCOUNT_EMAIL=$$GCP_SERVICE_ACCOUNT_EMAIL \
+                --build-arg GCP_PRIVATE_KEY=$$GCP_PRIVATE_KEY \
+                -t gcr.io/$PROJECT_ID/your-image-name .
+      secretEnv:
+          - 'GCP_PROJECT_ID'
+          - 'GCP_SERVICE_ACCOUNT_EMAIL'
+          - 'GCP_PRIVATE_KEY'
 
-images:
-    - 'gcr.io/$PROJECT_ID/my-image'
-
-options:
-    logging: NONE
+availableSecrets:
+    secretManager:
+        - versionName: projects/personal-2025-e1099/secrets/GCP_PROJECT_ID/versions/latest
+          env: 'GCP_PROJECT_ID'
+        - versionName: projects/personal-2025-e1099/secrets/GCP_SERVICE_ACCOUNT_EMAIL/versions/latest
+          env: 'GCP_SERVICE_ACCOUNT_EMAIL'
+        - versionName: projects/personal-2025-e1099/secrets/GCP_PRIVATE_KEY/versions/latest
+          env: 'GCP_PRIVATE_KEY'
