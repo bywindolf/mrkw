@@ -14,6 +14,18 @@ steps:
       secretEnv:
           ['GCP_PROJECT_ID', 'GCP_SERVICE_ACCOUNT_EMAIL', 'GCP_PRIVATE_KEY']
 
+    - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+      entrypoint: bash
+      args:
+          - -c
+          - |
+              echo "🚀 Deploying to Cloud Run..."
+              gcloud run deploy mrkw \
+                --image gcr.io/$PROJECT_ID/mrkw \
+                --region europe-west2 \
+                --platform managed \
+                --allow-unauthenticated
+
 images:
     - 'gcr.io/personal-2025-e1099/mrkw'
 
