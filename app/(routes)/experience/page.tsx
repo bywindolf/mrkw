@@ -1,5 +1,5 @@
 //https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
-export const dynamic = 'force-dynamic'
+export const dynamic = 'auto'
 import React from 'react'
 import PageHeader from '@components/sections/page-header'
 import Main from '@components/layout/main'
