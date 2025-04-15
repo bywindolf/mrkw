@@ -1,8 +1,7 @@
 //https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
 export const dynamic = 'force-dynamic'
-
 import React from 'react'
-import { db } from '@/lib/firebaseAdmin' // your admin Firestore
+import { db } from '@/lib/firebaseAdmin'
 import { notFound } from 'next/navigation'
 import PageHeader from '@components/sections/page-header'
 import Main from '@components/layout/main'
@@ -10,10 +9,10 @@ import Main from '@components/layout/main'
 export default async function CMSPage({
     params,
 }: {
-    params: { slug: string }
+    params: Promise<{ slug: string }>
 }) {
     // Await params.slug for dynamic routing
-    const { slug } = params // Destructure and use it directly
+    const { slug } = await params // Destructure and use it directly
 
     const formattedSlug = `${slug}` // Make sure you format the slug as needed (e.g., with "/")
 
