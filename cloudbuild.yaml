@@ -22,3 +22,5 @@ availableSecrets:
           env: 'GCP_SERVICE_ACCOUNT_EMAIL'
         - versionName: projects/personal-2025-e1099/secrets/GCP_PRIVATE_KEY/versions/latest
           env: 'GCP_PRIVATE_KEY'
+options:
+    logging: CLOUD_LOGGING_ONLY
