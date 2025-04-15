@@ -9,7 +9,8 @@ export default function Home() {
         <>
             <Hero>
                 <h1>
-                    Designer embrazing a updated role as frontend developer.
+                    Yes. Designer embrazing a updated role as frontend
+                    developer.
                 </h1>
                 <Link href="/experience" className="button">
                     Hello button!
