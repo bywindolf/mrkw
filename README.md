@@ -28,4 +28,4 @@ The project is deployed on **Google Cloud**. The deployment workflow ensures:
 2. **Dev branch** → Merged into `main` for production.
 3. **CI/CD** automates the deployment process.
 
-##trigger####
+##trigger
