@@ -5,9 +5,9 @@ steps:
           - '-c'
           - |
               docker build \
-                --build-arg GCP_PROJECT_ID=${GCP_PROJECT_ID} \
-                --build-arg GCP_SERVICE_ACCOUNT_EMAIL=${GCP_SERVICE_ACCOUNT_EMAIL} \
-                --build-arg GCP_PRIVATE_KEY=${GCP_PRIVATE_KEY} \
+                --build-arg GCP_PROJECT_ID=${_GCP_PROJECT_ID} \
+                --build-arg GCP_SERVICE_ACCOUNT_EMAIL=${_GCP_SERVICE_ACCOUNT_EMAIL} \
+                --build-arg GCP_PRIVATE_KEY=${_GCP_PRIVATE_KEY} \
                 -t gcr.io/${PROJECT_ID}/your-image-name .
       secretEnv:
           - 'GCP_PROJECT_ID'
