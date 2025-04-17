@@ -18,9 +18,11 @@ export default function Card({ item }: CardProps) {
         <Link href={`/work/${item.slug}`} className="card">
             <Image
                 src={imageSrc}
-                width={600}
+                width={800}
                 height={300}
                 alt={altText}
+                quality={100}
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="card__image"
             ></Image>
             <div className="card__content">

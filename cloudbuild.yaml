@@ -22,7 +22,7 @@ steps:
               echo "🚀 Deploying to Cloud Run..."
               gcloud run deploy mrkw \
                 --image gcr.io/$PROJECT_ID/mrkw \
-                --region europe-west2 \
+                --region europe-west1 \
                 --platform managed \
                 --allow-unauthenticated
 
