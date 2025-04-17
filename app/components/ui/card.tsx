@@ -32,7 +32,7 @@ export default function Card({ item }: CardProps) {
                     )}
 
                     {'year' in item && (
-                        <p className="card__year">{item.year}</p>
+                        <span className="card__year">{item.year}</span>
                     )}
                 </div>
                 {'categories' in item && (

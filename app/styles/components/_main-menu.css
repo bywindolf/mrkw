@@ -13,7 +13,7 @@
     }
 
     .main-menu__item.active {
-        @apply bg-primary;
+        @apply bg-primary text-background;
     }
 
     /* Logic for Main Menu */
