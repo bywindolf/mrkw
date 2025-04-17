@@ -10,7 +10,10 @@
         @apply px-body flex flex-col gap-20 pt-20 pb-24 align-middle;
     }
     .content {
-        @apply my-container;
+        @apply my-container grid-12;
+    }
+    .rich-content {
+        @apply col-span-9 mx-auto flex flex-col gap-4;
     }
 }
 

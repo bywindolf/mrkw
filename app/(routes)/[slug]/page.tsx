@@ -34,10 +34,12 @@ export default async function CMSPage({
             <Main>
                 <PageHeader>{page.title}</PageHeader>
 
-                <div
-                    className="my-container"
-                    dangerouslySetInnerHTML={{ __html: page.content }}
-                ></div>
+                <div className="content">
+                    <div
+                        className="rich-content"
+                        dangerouslySetInnerHTML={{ __html: page.content }}
+                    ></div>
+                </div>
             </Main>
         </main>
     )
