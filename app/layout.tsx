@@ -19,6 +19,25 @@ import GlobalFooter from '@components/layout/global-footer'
 //     }
 // }
 
+export const metadata = {
+    title: 'Kristoffer — Portfolio selling frontend',
+    description: 'Portfolio selling frontend',
+    icons: {
+        icon: [
+            {
+                type: 'image/svg+xml',
+                media: '(prefers-color-scheme: light)',
+                url: '/favicon-light.svg',
+            },
+            {
+                type: 'image/svg+xml',
+                media: '(prefers-color-scheme: dark)',
+                url: '/favicon-light.svg',
+            },
+        ],
+    },
+}
+
 export default async function RootLayout({
     children,
 }: Readonly<{

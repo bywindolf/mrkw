@@ -58,7 +58,7 @@ export default async function SingleWork({
                         )}
                     </div>
                 </section>
-                <div className="my-container">
+                <div className="content">
                     {cover && (
                         <Image
                             width={1400}

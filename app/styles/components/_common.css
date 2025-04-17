@@ -51,4 +51,8 @@
     .card__tags {
         @apply justify-end;
     }
+
+    .featured-work {
+        @apply flex flex-col gap-16;
+    }
 }

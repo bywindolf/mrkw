@@ -9,6 +9,9 @@
     .main {
         @apply px-body flex flex-col gap-20 pt-20 pb-24 align-middle;
     }
+    .content {
+        @apply my-container;
+    }
 }
 
 /* Finally made a utility class! */
@@ -18,7 +21,7 @@
 }
 
 @utility my-container {
-    @apply desktop:max-w-desktop gap-fluid dev-color mx-auto w-full;
+    @apply desktop:max-w-desktop gap-fluid mx-auto w-full;
 }
 @utility grid-12 {
     @apply dev-color gap-fluid grid grid-cols-12;

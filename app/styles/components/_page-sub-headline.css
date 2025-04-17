@@ -1,5 +1,5 @@
 @layer components {
     .page-sub-headline {
-        @apply my-container mx-auto mb-16;
+        @apply my-container mx-auto;
     }
 }
