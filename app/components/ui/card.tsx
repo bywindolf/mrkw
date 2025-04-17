@@ -31,8 +31,8 @@ export default function Card({ item }: CardProps) {
                         <h4 className="card__title">{item.title}</h4>
                     )}
 
-                    {'client' in item && (
-                        <p className="card__client">{item.client}</p>
+                    {'year' in item && (
+                        <p className="card__year">{item.year}</p>
                     )}
                 </div>
                 {'categories' in item && (

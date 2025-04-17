@@ -9,7 +9,7 @@ export default function Home() {
     return (
         <>
             <Hero>
-                <h1>
+                <h1 className="hero__title">
                     Yes. Designer embrazing a updated role as frontend
                     developer.
                 </h1>

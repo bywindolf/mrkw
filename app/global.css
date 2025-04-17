@@ -6,8 +6,8 @@
 @import './styles/components.css';
 
 :root {
-    --background: var(--color-gray-100);
-    --foreground: var(--color-gray-900);
+    --background: var(--color-gray-500);
+    --foreground: var(--color-gray-50);
     --muted: var(--color-gray-400);
     /* Dev color to hide */
     /* --dev-color: rgba(170, 255, 142, 0.037); */
@@ -103,12 +103,7 @@
         --foreground: var(--color-gray-50);
     }
 }
-
 body {
     background: var(--background);
     color: var(--foreground);
-
-    /* @apply grid grid-rows-[auto_minmax(900px,1fr)_auto]; */
 }
-
-/* From here we using some TailWind logic */

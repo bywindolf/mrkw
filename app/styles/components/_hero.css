@@ -6,9 +6,9 @@
         font-size: var(--step-7);
     }
     .hero__container {
-        @apply max-w-desktop grid w-full justify-items-start gap-4;
+        @apply my-container grid-12 justify-items-start gap-4;
     }
     .hero__title {
-        @apply text-center;
+        @apply desktop:col-span-9 col-span-12;
     }
 }
