@@ -96,7 +96,7 @@ export function App() {
             {
                 path: 'example',
                 name: 'Example CMS view',
-                // view: <ExampleCMSView />,
+                view: '',
             },
         ],
         []
