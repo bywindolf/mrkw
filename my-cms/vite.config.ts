@@ -1,17 +1,16 @@
-import { defineConfig } from "vite"
-import react from "@vitejs/plugin-react"
+import { defineConfig } from 'vite'
+// import react from "@vitejs/plugin-react"
+import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
     esbuild: {
-        logOverride: { "this-is-undefined-in-esm": "silent" }
+        logOverride: { 'this-is-undefined-in-esm': 'silent' },
     },
     build: {
-        outDir: "./build",
-        target: "ESNEXT",
-        sourcemap: true
+        outDir: './build',
+        target: 'ESNEXT',
+        sourcemap: true,
     },
-    optimizeDeps: { include: ["react/jsx-runtime"] },
-    plugins: [
-        react({})
-    ]
+    optimizeDeps: { include: ['react/jsx-runtime'] },
+    plugins: [react({})],
 })
