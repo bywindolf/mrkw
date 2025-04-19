@@ -4,7 +4,7 @@
     "private": true,
     "type": "module",
     "dependencies": {
-        "@firecms/collection_editor": "^3.0.0-beta",
+        "@firecms/collection_editor": "3.0.0-beta.12",
         "@firecms/collection_editor_firebase": "^3.0.0-beta",
         "@firecms/core": "^3.0.0-beta",
         "@firecms/data_enhancement": "^3.0.0-beta",

@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@firecms/collection_editor':
-        specifier: ^3.0.0-beta
-        version: 3.0.0-beta.13(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)
+        specifier: 3.0.0-beta.12
+        version: 3.0.0-beta.12(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)
       '@firecms/collection_editor_firebase':
         specifier: ^3.0.0-beta
         version: 3.0.0-beta.13(@firebase/app@0.10.13)(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(firebase@10.14.1)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)
@@ -607,6 +607,14 @@ packages:
 
   '@firebase/webchannel-wrapper@1.0.1':
     resolution: {integrity: sha512-jmEnr/pk0yVkA7mIlHNnxCi+wWzOFUg0WyIotgkKAb2u1J7fAeDBcVNSTjTihbAYNusCLQdW5s9IJ5qwnEufcQ==}
+
+  '@firecms/collection_editor@3.0.0-beta.12':
+    resolution: {integrity: sha512-7k8tR6oKHewzysiieBdBM2Edml0UfVmjRlkERl4IV18qbCbRfWodtgSBR2lymBMXV7+o7xB/jQFiZ3yF7j1xuw==}
+    peerDependencies:
+      react: '>=18.0.0'
+      react-dom: '>=18.0.0'
+      react-router: ^6.28.0
+      react-router-dom: ^6.28.0
 
   '@firecms/collection_editor@3.0.0-beta.13':
     resolution: {integrity: sha512-KhLAeDnepMDJxHM5GoxcGGCfxKo94v1PKOeOxSfC+JGvt71nB/Ta5jNxO7qWgYfDDIJwZUWyvd90CjxIkIjxxQ==}
@@ -4576,6 +4584,27 @@ snapshots:
       tslib: 2.8.1
 
   '@firebase/webchannel-wrapper@1.0.1': {}
+
+  '@firecms/collection_editor@3.0.0-beta.12(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@firecms/data_export': 3.0.0-beta.13(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)
+      '@firecms/data_import': 3.0.0-beta.13(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)
+      '@firecms/data_import_export': 3.0.0-beta.13(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)
+      '@firecms/formex': 3.0.0-beta.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@firecms/schema_inference': 3.0.0-beta.13
+      '@firecms/ui': 3.0.0-beta.13(@types/react-dom@18.3.0)(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@hello-pangea/dnd': 17.0.0(@types/react@18.3.20)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      json5: 2.2.3
+      prism-react-renderer: 2.4.1(react@18.3.1)
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+      react-router: 6.30.0(react@18.3.1)
+      react-router-dom: 6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - csstype
+      - supports-color
 
   '@firecms/collection_editor@3.0.0-beta.13(@types/react-dom@18.3.0)(@types/react@18.3.20)(csstype@3.1.3)(react-dom@18.3.1(react@18.3.1))(react-router-dom@6.30.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-router@6.30.0(react@18.3.1))(react@18.3.1)':
     dependencies:
