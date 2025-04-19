@@ -4,7 +4,6 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 COPY . .
 
-# Set env vars (if you pass them via build args)
 ARG VITE_FIREBASE_PROJECT_ID
 ARG VITE_FIREBASE_APP_ID
 ARG VITE_FIREBASE_STORAGE_BUCKET
@@ -27,7 +26,7 @@ RUN npm run build
 # Stage 2: Serve with Nginx
 FROM nginx:alpine
 RUN rm -rf /usr/share/nginx/html/*
-COPY --from=builder /app/dist /usr/share/nginx/html
+COPY --from=builder /app/build /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
