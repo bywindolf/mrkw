@@ -6,7 +6,7 @@ import React from 'react'
 // Moved WorkProps
 import { WorkItem, WorkProps } from '@/common/types'
 import Card from '@components/ui/card'
-import { fetchWork } from '@/common/utils'
+import { fetchWork } from '@/common/database'
 // import ExperienceCard from './experience-card'
 
 export default async function Work({ isFeatured, colSpan = '' }: WorkProps) {

@@ -1,8 +1,9 @@
 import React from 'react'
 import Main from '@components/layout/main'
 import Image from 'next/image'
-import { fetchSingleWork } from '@/common/utils'
+import { fetchSingleWork } from '@/common/database'
 import FeaturedWorks from '@components/sections/featured-works'
+import { getPublicImageUrl } from '@/common/functions'
 
 export default async function SingleWork({
     params,
@@ -22,10 +23,7 @@ export default async function SingleWork({
                     <div className="workinfo__container">
                         <div className="workinfo__info">
                             <div className="workinfo__header">
-                                <h1 className="header__client">
-                                    {page.client}
-                                </h1>
-                                <h2 className="header__title">{page.title}</h2>
+                                <h1 className="header__client">{page.title}</h1>
                             </div>
                             <div className="workinfo__details">
                                 <div className="tags">
@@ -58,6 +56,12 @@ export default async function SingleWork({
                         )}
                     </div>
                 </section>
+                <div>test</div>
+
+                {page.images &&
+                    page.images.map((image: string, index: number) => (
+                        <p key={index}>{getPublicImageUrl(image)}</p>
+                    ))}
                 <div className="content">
                     {cover && (
                         <Image

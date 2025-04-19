@@ -6,10 +6,10 @@ import PageHeader from '@components/sections/page-header'
 
 import Card from '@components/ui/card'
 import Main from '@components/layout/main'
-import { fetchWork } from '@/common/utils'
+import { fetchWork } from '@/common/database'
 
 export default async function page() {
-    const workData = await fetchWork({})
+    const workData = await fetchWork({ isType: 'work2' })
 
     return (
         <>

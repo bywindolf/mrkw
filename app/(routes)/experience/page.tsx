@@ -5,7 +5,7 @@ import PageHeader from '@components/sections/page-header'
 import Main from '@components/layout/main'
 import PageSubHeadline from '@components/sections/page-sub-headline'
 import ExperienceCard from '@components/ui/experience-card'
-import { fetchEducation, fetchExperience } from '@/common/utils'
+import { fetchEducation, fetchExperience } from '@/common/database'
 
 export default async function Experience() {
     const experienceData = await fetchExperience()

@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation'
 
 interface FetchWorkOptions {
     isFeatured?: boolean
+    isType: 'work' | 'work2'
 }
 
 export const fetchWork = async (options: FetchWorkOptions) => {
@@ -16,7 +17,7 @@ export const fetchWork = async (options: FetchWorkOptions) => {
                 .where('featured', '==', options.isFeatured)
                 .get()
         } else {
-            workSnapshot = await db.collection('work').get()
+            workSnapshot = await db.collection(options.isType).get()
         }
 
         const workData = workSnapshot.docs.map((doc) => ({
@@ -31,10 +32,10 @@ export const fetchWork = async (options: FetchWorkOptions) => {
     }
 }
 
-export const fetchSingleWork = async (slug: string) => {
+export const fetchSingleWork = async (slug: string): Promise<WorkItem> => {
     try {
         const singleWorkSnapshot = await db
-            .collection('work')
+            .collection('work2')
             .where('slug', '==', slug)
             .limit(1)
             .get()
@@ -48,6 +49,7 @@ export const fetchSingleWork = async (slug: string) => {
         }
 
         const page = singleWorkSnapshot.docs.map((doc) => doc.data())[0]
+
         return page
     } catch (error) {
         console.error('Error fetching work data:', error)

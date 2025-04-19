@@ -16,6 +16,7 @@ export type WorkItem = {
     skills?: string[]
     isFeatured?: boolean
     year?: string
+    images?: string[]
     cover?: { downloadURL: string }[]
 }
 
