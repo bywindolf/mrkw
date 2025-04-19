@@ -30,9 +30,6 @@ import {
 
 import { firebaseConfig } from './firebase_config'
 
-import { productsCollection } from './collections/products'
-// import { myCollection } from './collections/myCollections'
-
 import { useDataEnhancementPlugin } from '@firecms/data_enhancement'
 import {
     useBuildUserManagement,
@@ -41,7 +38,7 @@ import {
 } from '@firecms/user_management'
 import { useImportPlugin } from '@firecms/data_import'
 import { useExportPlugin } from '@firecms/data_export'
-import { ExampleCMSView } from './views/ExampleCMSView'
+// import { ExampleCMSView } from './views/ExampleCMSView'
 import { useFirestoreCollectionsConfigController } from '@firecms/collection_editor_firebase'
 import {
     mergeCollections,
@@ -82,7 +79,7 @@ export function App() {
     const collectionsBuilder = useCallback(() => {
         // Here we define a sample collection in code.
         const collections = [
-            productsCollection,
+            // productsCollection,
             testCollection,
             // Your collections here
         ]
@@ -99,7 +96,7 @@ export function App() {
             {
                 path: 'example',
                 name: 'Example CMS view',
-                view: <ExampleCMSView />,
+                // view: <ExampleCMSView />,
             },
         ],
         []
