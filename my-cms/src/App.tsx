@@ -206,7 +206,7 @@ export function App() {
         <SnackbarProvider>
             <ModeControllerProvider value={modeController}>
                 <FireCMS
-                    apiKey={import.meta.env.VITE_FIRECMS_API_KEY}
+                    // apiKey={import.meta.env.VITE_FIRECMS_API_KEY}
                     navigationController={navigationController}
                     authController={authController}
                     userConfigPersistence={userConfigPersistence}
