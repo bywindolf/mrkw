@@ -1,6 +1,6 @@
 @layer components {
     .work__list {
-        @apply grid-12 my-container;
+        @apply grid-12 my-container gap-y-20;
     }
     .work__item {
         @apply tablet:col-span-6 desktop:col-span-6 col-span-12;

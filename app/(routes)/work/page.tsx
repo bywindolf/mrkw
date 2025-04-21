@@ -9,7 +9,7 @@ import Main from '@components/layout/main'
 import { fetchWork } from '@/common/database'
 
 export default async function page() {
-    const workData = await fetchWork({ isType: 'work2' })
+    const workData = await fetchWork({ isType: 'work' })
 
     return (
         <>

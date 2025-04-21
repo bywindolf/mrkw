@@ -30,8 +30,10 @@ import {
     useInitialiseFirebase,
 } from '@firecms/firebase'
 import { CenteredView } from '@firecms/ui'
-import { testCollection } from './collections/myCollections'
-
+import { experience } from './collections/experience'
+import { education } from './collections/education'
+import { work } from './collections/work'
+import { pagesCollection } from './collections/pages'
 import { firebaseConfig } from './firebase_config'
 
 function App() {
@@ -56,7 +58,10 @@ function App() {
         []
     )
 
-    const collections = useMemo(() => [testCollection], [])
+    const collections = useMemo(
+        () => [experience, education, work, pagesCollection],
+        []
+    )
 
     const { firebaseApp, firebaseConfigLoading, configError } =
         useInitialiseFirebase({

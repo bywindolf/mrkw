@@ -4,7 +4,7 @@ import Main from '@components/layout/main'
 export default async function NotFound() {
     return (
         <Main>
-            <div>
+            <div className="my-container">
                 <h2>Not Found: </h2>
                 <p>Could not find requested resource</p>
                 <p>

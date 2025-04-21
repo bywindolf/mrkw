@@ -1,6 +1,5 @@
 import { WorkItem, ExperienceItem } from './types'
 import { db } from '@/lib/firebaseAdmin'
-import { notFound } from 'next/navigation'
 
 interface FetchWorkOptions {
     isFeatured?: boolean
@@ -32,10 +31,12 @@ export const fetchWork = async (options: FetchWorkOptions) => {
     }
 }
 
-export const fetchSingleWork = async (slug: string): Promise<WorkItem> => {
+export const fetchSingleWork = async (
+    slug: string
+): Promise<WorkItem | null> => {
     try {
         const singleWorkSnapshot = await db
-            .collection('work2')
+            .collection('work')
             .where('slug', '==', slug)
             .limit(1)
             .get()
@@ -43,9 +44,9 @@ export const fetchSingleWork = async (slug: string): Promise<WorkItem> => {
         // console.log(page)
         // Check cover, if missing return null
 
-        if (singleWorkSnapshot.empty) {
-            console.error('No page found for this slug:', slug)
-            notFound() // Show Next.js 404
+        if (!singleWorkSnapshot || singleWorkSnapshot.empty) {
+            console.warn('No page found for this slug:', slug)
+            return null
         }
 
         const page = singleWorkSnapshot.docs.map((doc) => doc.data())[0]

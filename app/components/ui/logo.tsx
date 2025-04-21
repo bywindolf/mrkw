@@ -26,7 +26,7 @@ export default function Logo() {
                     </svg>
                 }
             </div>
-            <span className="logo__text">MRKW</span>
+            <span className="logo__text">Kristoffer Windolf</span>
         </Link>
     )
 }

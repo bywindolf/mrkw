@@ -5,6 +5,10 @@ import { fetchSingleWork } from '@/common/database'
 import FeaturedWorks from '@components/sections/featured-works'
 import { getPublicImageUrl } from '@/common/functions'
 
+import { ContentBlock } from '@/common/types'
+import { notFound } from 'next/navigation'
+import { Markdown } from '@firecms/ui'
+
 export default async function SingleWork({
     params,
 }: {
@@ -14,7 +18,13 @@ export default async function SingleWork({
 
     const page = await fetchSingleWork(slug)
 
-    const cover = page.cover?.[0]?.downloadURL || null
+    if (!page) {
+        notFound()
+    }
+
+    const cover = page?.cover || null
+    // Construct the url from bucket source that may change
+    const cover_url = cover ? getPublicImageUrl(cover) : null
 
     return (
         <>
@@ -23,7 +33,10 @@ export default async function SingleWork({
                     <div className="workinfo__container">
                         <div className="workinfo__info">
                             <div className="workinfo__header">
-                                <h1 className="header__client">{page.title}</h1>
+                                <h1 className="header__title">{page.title}</h1>
+                                <h2 className="header__client">
+                                    {page.client}
+                                </h2>
                             </div>
                             <div className="workinfo__details">
                                 <div className="tags">
@@ -47,32 +60,56 @@ export default async function SingleWork({
                             </div>
                         </div>
                         {page.description && (
-                            <div
+                            <Markdown
                                 className="workinfo__description"
-                                dangerouslySetInnerHTML={{
-                                    __html: page.description,
-                                }}
+                                source={page.description}
                             />
                         )}
                     </div>
                 </section>
-                <div>test</div>
 
-                {page.images &&
-                    page.images.map((image: string, index: number) => (
-                        <p key={index}>{getPublicImageUrl(image)}</p>
-                    ))}
-                <div className="content">
-                    {cover && (
+                <section className="content">
+                    {cover_url && (
                         <Image
-                            width={1400}
+                            width={1800}
                             height={1200}
-                            src={cover}
+                            src={cover_url}
                             alt=""
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            sizes="(max-width: 1800px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="cover"
                         ></Image>
                     )}
-                </div>
+
+                    {Array.isArray(page.content) &&
+                        page.content.map(
+                            (block: ContentBlock, index: number) => {
+                                switch (block.type) {
+                                    case 'text':
+                                        return <Markdown source={block.value} />
+
+                                    case 'image':
+                                        return (
+                                            <section>
+                                                <Image
+                                                    src={getPublicImageUrl(
+                                                        block.value
+                                                    )}
+                                                    key={index}
+                                                    alt={''}
+                                                    width={1800}
+                                                    height={200}
+                                                ></Image>
+                                            </section>
+                                        )
+                                }
+                            }
+                        )}
+
+                    {page.images &&
+                        page.images.map((image: string, index: number) => (
+                            <p key={index}>{getPublicImageUrl(image)}</p>
+                        ))}
+                </section>
                 <FeaturedWorks></FeaturedWorks>
             </Main>
         </>

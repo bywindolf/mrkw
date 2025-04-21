@@ -3,11 +3,14 @@ import React from 'react'
 import { CardProps } from '@/common/types'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getPublicImageUrl } from '@/common/functions'
 
 export default function Card({ item }: CardProps) {
     // Check cover, if missing return null
-    const cover = item.cover?.[0]?.downloadURL || null
-    const imageSrc = cover || 'logo.svg' // Fallback to default if no cover
+    // const cover = item.cover?.[0]?.downloadURL || null
+    const cover = item?.cover || null
+    const cover_url = cover ? getPublicImageUrl(cover) : null
+    const imageSrc = cover_url || 'logo.svg' // Fallback to default if no cover
 
     const altText =
         'title' in item && 'client' in item

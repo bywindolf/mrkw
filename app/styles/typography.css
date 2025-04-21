@@ -28,4 +28,10 @@
     p {
         @apply mb-[1em];
     }
+    h2:has(+ p) {
+        @apply text-primary mb-12 leading-snug;
+    }
+    .content p {
+        font-size: var(--step-1);
+    }
 }

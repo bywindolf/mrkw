@@ -26,7 +26,7 @@
 
     .tags__item {
         font-size: var(--step--2);
-        @apply text-background bg-foreground border-foreground rounded-full border-2 px-2 py-1 font-mono leading-none font-semibold uppercase opacity-100;
+        @apply text-background bg-primary border-primary rounded-full border-2 px-2 py-1 font-mono leading-none font-semibold uppercase opacity-100;
     }
 
     .tag--js {
@@ -37,7 +37,7 @@
         @apply flex h-full flex-col gap-4 transition-all;
     }
     .card__image {
-        @apply aspect-[3/2] w-full rounded-xl bg-gray-600 object-cover;
+        @apply aspect-[16/14] w-full rounded-xl bg-gray-600 object-contain object-center;
     }
     .card__info {
         @apply flex items-center gap-2;
@@ -54,5 +54,9 @@
 
     .featured-work {
         @apply flex flex-col gap-16;
+    }
+
+    .content img {
+        @apply my-16;
     }
 }
