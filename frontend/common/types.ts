@@ -37,6 +37,7 @@ export type ExperienceItem = {
     start?: string
     end?: string
     skills?: string[]
+    cover?: string
 }
 
 export type CardProps = {
