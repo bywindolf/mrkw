@@ -43,6 +43,7 @@ export default async function CMSPage({
                             case 'text':
                                 return (
                                     <Markdown
+                                        key={index}
                                         className="content__text"
                                         source={block.value}
                                     />
