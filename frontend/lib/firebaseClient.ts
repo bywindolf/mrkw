@@ -1,6 +1,6 @@
 import { getDownloadURL, getStorage, ref } from 'firebase/storage'
 import { initializeApp, getApps } from 'firebase/app'
-import { firebaseConfig } from '@/my-cms/src/firebase_config'
+import { firebaseConfig } from '@my-cms/src/firebase_config'
 
 const app =
     getApps().length === 0 ? initializeApp(firebaseConfig) : getApps()[0]

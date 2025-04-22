@@ -1,44 +1,11 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    // "types": ["next", "react", "react-dom"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    // "moduleResolution": "node",
-    "moduleResolution": "bundler",
-
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
-    "baseUrl": "./",
+    "baseUrl": ".", // Set the base URL to the root of the project
     "paths": {
-      "@firecms/*": ["app/components/*"], // Alias @components to src/components
+      "@my-cms/*": ["my-cms/*"], // Map '@lib' to the 'lib' directory in the root folder
 
-      "@components/*": ["app/components/*"], // Alias @components to src/components
-      "@/*": ["./*"]
+      "@lib/*": ["frontend/lib/*"], // Map '@lib' to the 'lib' directory in the root folder
+      "@common/*": ["common/*"] // Map '@lib' to the 'lib' directory in the root folder
     }
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    "next.config.js",
-    "lib/firebaseAdminTest.js",
-    "node_modules/firecms",
-    "types",
-    "tailwind.config.js"
-  ],
-  "exclude": ["node_modules"]
+  }
 }

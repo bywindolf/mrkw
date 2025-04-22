@@ -1,4 +1,4 @@
-import MenuItem from '@components/layout/menu-item'
+import MenuItem from '../layout/menu-item'
 import { useEffect, useRef } from 'react'
 
 const menuData = [

@@ -5,7 +5,7 @@ import React from 'react'
 
 // Moved WorkProps
 import { WorkItem, WorkProps } from '@/common/types'
-import Card from '@components/ui/card'
+import Card from '../ui/card'
 import { fetchWork } from '@/common/database'
 // import ExperienceCard from './experience-card'
 

@@ -2,10 +2,9 @@
 export const dynamic = 'auto'
 
 import React from 'react'
-import PageHeader from '@components/sections/page-header'
-
-import Card from '@components/ui/card'
-import Main from '@components/layout/main'
+import PageHeader from '@/app/components/sections/page-header'
+import Card from '@/app/components/ui/card'
+import Main from '@/app/components/layout/main'
 import { fetchWork } from '@/common/database'
 
 export default async function page() {

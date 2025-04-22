@@ -2,9 +2,9 @@
 //Component GlobalHeader
 
 import React, { useEffect, useRef, useState } from 'react'
-import Logo from '@components/ui/logo'
-import MainMenu from '@components/layout/main-menu'
-import Togglemenu from '@components/ui/toggle-menu'
+import Logo from '../ui/logo'
+import MainMenu from '../layout/main-menu'
+import Togglemenu from '../ui/toggle-menu'
 import { usePathname } from 'next/navigation'
 
 export default function GlobalHeader() {

@@ -1,15 +1,15 @@
 //https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config#dynamic
 export const dynamic = 'auto'
 import React from 'react'
-import Main from '@components/layout/main'
-import Hero from '@components/sections/hero'
-import FeaturedWorks from '@components/sections/featured-works'
+import Main from '../components/layout/main'
+import FeaturedWorks from '../components//sections/featured-works'
 import { notFound } from 'next/navigation'
 import { db } from '@/lib/firebaseAdmin'
 import { getPublicImageUrl } from '@/common/functions'
 import Image from 'next/image'
 import { Markdown } from '@firecms/ui'
 import { ContentBlock } from '@/common/types'
+import Hero from '../components/sections/hero'
 export default async function Home() {
     const formattedSlug = 'home' // Or '' if you prefer
 

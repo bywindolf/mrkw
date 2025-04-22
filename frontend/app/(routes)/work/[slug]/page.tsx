@@ -1,8 +1,8 @@
 import React from 'react'
-import Main from '@components/layout/main'
+import Main from '@/app/components/layout/main'
 import Image from 'next/image'
 import { fetchSingleWork } from '@/common/database'
-import FeaturedWorks from '@components/sections/featured-works'
+import FeaturedWorks from '@/app/components/sections/featured-works'
 import { getPublicImageUrl } from '@/common/functions'
 
 import { ContentBlock } from '@/common/types'
