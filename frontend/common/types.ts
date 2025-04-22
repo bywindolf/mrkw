@@ -8,7 +8,7 @@ export type ContentBlock =
     | { type: 'pageHeader'; value: string }
     | { type: 'text'; value: string }
     | { type: 'image'; value: string }
-    | { type: 'hero'; value: string }
+    | { type: 'hero'; value: { content: string; title: string } }
 
 export type WorkItem = {
     id?: number | string
