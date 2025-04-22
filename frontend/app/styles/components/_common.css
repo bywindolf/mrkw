@@ -26,7 +26,7 @@
 
     .tags__item {
         font-size: var(--step--2);
-        @apply text-background bg-primary border-primary rounded-full border-2 px-2 py-1 font-mono leading-none font-semibold uppercase opacity-100;
+        @apply text-background bg-primary border-primary rounded-full border-2 px-2 py-1 font-mono font-semibold uppercase leading-none opacity-100;
     }
 
     .tag--js {
@@ -56,7 +56,7 @@
         @apply flex flex-col gap-16;
     }
 
-    .content img {
+    .content__text img {
         @apply my-16;
     }
 }
