@@ -2,7 +2,7 @@
 export const dynamic = 'auto'
 import React from 'react'
 import Main from '../components/layout/main'
-import FeaturedWorks from '../components//sections/featured-works'
+import FeaturedWorks from '../components/sections/featured-works'
 import { notFound } from 'next/navigation'
 import { db } from '@/lib/firebaseAdmin'
 import { getPublicImageUrl } from '@/common/functions'

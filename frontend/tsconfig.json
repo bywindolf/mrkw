@@ -32,7 +32,6 @@
         "**/*.tsx",
         ".next/types/**/*.ts",
         "next.config.js",
-        "lib/firebaseAdminTest.js",
         "node_modules/firecms",
         "types",
         "tailwind.config.js"

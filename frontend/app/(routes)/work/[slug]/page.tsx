@@ -89,12 +89,11 @@ export default async function SingleWork({
 
                                     case 'image':
                                         return (
-                                            <section>
+                                            <section key={index}>
                                                 <Image
                                                     src={getPublicImageUrl(
                                                         block.value
                                                     )}
-                                                    key={index}
                                                     alt={''}
                                                     width={1800}
                                                     height={200}
