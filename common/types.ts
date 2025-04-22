@@ -4,6 +4,12 @@ export type WorkProps = {
     isFeatured?: boolean
 }
 
+export type ContentBlock =
+    | { type: 'pageHeader'; value: string }
+    | { type: 'text'; value: string }
+    | { type: 'image'; value: string }
+    | { type: 'hero'; value: string }
+
 export type WorkItem = {
     id?: number | string
     client?: string
@@ -11,12 +17,14 @@ export type WorkItem = {
     slug?: string
     categories?: string[]
     description?: string
+    content?: ContentBlock[]
     start?: string
     end?: string
     skills?: string[]
     isFeatured?: boolean
     year?: string
-    cover?: { downloadURL: string }[]
+    images?: string[]
+    cover?: string
 }
 
 export type ExperienceItem = {
@@ -29,7 +37,6 @@ export type ExperienceItem = {
     start?: string
     end?: string
     skills?: string[]
-    cover: { downloadURL: string }[]
 }
 
 export type CardProps = {

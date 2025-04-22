@@ -17,10 +17,10 @@
     }
 
     /* Home */
-    .home.global-header .logo {
+    /* .home.global-header .logo {
         @apply text-background;
     }
     .home .main-menu__item {
         @apply text-background;
-    }
+    } */
 }

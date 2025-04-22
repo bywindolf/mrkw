@@ -1,14 +1,18 @@
 @layer components {
     .hero {
-        @apply desktop:aspect-[16/8] text-background bg-primary px-body flex flex-col items-center justify-center py-30;
+        @apply desktop:aspect-[16/8] text-primary px-body flex flex-col items-center justify-center py-30;
     }
     .hero h1 {
-        font-size: var(--step-7);
+        @apply text-[length:var(--step-7)] leading-none;
     }
     .hero__container {
         @apply my-container grid-12 justify-items-start gap-4;
     }
+
     .hero__title {
-        @apply desktop:col-span-9 col-span-12;
+        @apply desktop:col-span-8 tablet:col-span-10 col-span-12;
+    }
+    .hero__content {
+        @apply desktop:col-span-8 tablet:col-span-10 col-span-12;
     }
 }

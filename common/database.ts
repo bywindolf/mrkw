@@ -1,9 +1,9 @@
 import { WorkItem, ExperienceItem } from './types'
 import { db } from '@/lib/firebaseAdmin'
-import { notFound } from 'next/navigation'
 
 interface FetchWorkOptions {
     isFeatured?: boolean
+    isType: 'work' | 'work2'
 }
 
 export const fetchWork = async (options: FetchWorkOptions) => {
@@ -16,7 +16,7 @@ export const fetchWork = async (options: FetchWorkOptions) => {
                 .where('featured', '==', options.isFeatured)
                 .get()
         } else {
-            workSnapshot = await db.collection('work').get()
+            workSnapshot = await db.collection(options.isType).get()
         }
 
         const workData = workSnapshot.docs.map((doc) => ({
@@ -31,7 +31,9 @@ export const fetchWork = async (options: FetchWorkOptions) => {
     }
 }
 
-export const fetchSingleWork = async (slug: string) => {
+export const fetchSingleWork = async (
+    slug: string
+): Promise<WorkItem | null> => {
     try {
         const singleWorkSnapshot = await db
             .collection('work')
@@ -42,12 +44,13 @@ export const fetchSingleWork = async (slug: string) => {
         // console.log(page)
         // Check cover, if missing return null
 
-        if (singleWorkSnapshot.empty) {
-            console.error('No page found for this slug:', slug)
-            notFound() // Show Next.js 404
+        if (!singleWorkSnapshot || singleWorkSnapshot.empty) {
+            console.warn('No page found for this slug:', slug)
+            return null
         }
 
         const page = singleWorkSnapshot.docs.map((doc) => doc.data())[0]
+
         return page
     } catch (error) {
         console.error('Error fetching work data:', error)

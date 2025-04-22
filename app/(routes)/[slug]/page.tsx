@@ -5,6 +5,10 @@ import { db } from '@/lib/firebaseAdmin'
 import { notFound } from 'next/navigation'
 import PageHeader from '@components/sections/page-header'
 import Main from '@components/layout/main'
+import { ContentBlock } from '@/common/types'
+import Image from 'next/image'
+import { getPublicImageUrl } from '@/common/functions'
+import { Markdown } from '@firecms/ui'
 
 export default async function CMSPage({
     params,
@@ -28,19 +32,35 @@ export default async function CMSPage({
     }
 
     const page = pageSnap.docs[0].data()
-
+    console.log(page.content)
     return (
-        <main>
-            <Main>
-                <PageHeader>{page.title}</PageHeader>
-
-                <div className="content">
-                    <div
-                        className="rich-content"
-                        dangerouslySetInnerHTML={{ __html: page.content }}
-                    ></div>
-                </div>
-            </Main>
-        </main>
+        <Main>
+            <PageHeader>{page.headline}</PageHeader>
+            <section className="content">
+                {Array.isArray(page.content) &&
+                    page.content.map((block: ContentBlock, index: number) => {
+                        switch (block.type) {
+                            case 'text':
+                                return (
+                                    <Markdown
+                                        key={index}
+                                        className="content__text"
+                                        source={block.value}
+                                    />
+                                )
+                            case 'image':
+                                return (
+                                    <Image
+                                        src={getPublicImageUrl(block.value)}
+                                        key={index}
+                                        alt={''}
+                                        width={1800}
+                                        height={200}
+                                    ></Image>
+                                )
+                        }
+                    })}
+            </section>
+        </Main>
     )
 }

@@ -1,7 +1,4 @@
-'use client'
-import { usePathname } from 'next/navigation'
-
-export const getSlug = () => {
-    const pathname = usePathname
-    console.log('..>', pathname.name)
+export const getPublicImageUrl = (path: string) => {
+    const BUCKET_NAME = 'personal-2025-e1099.firebasestorage.app'
+    return `https://storage.googleapis.com/${BUCKET_NAME}/${path}`
 }

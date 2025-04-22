@@ -1,7 +1,7 @@
 'use client'
 //Component GlobalHeader
 
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Logo from '@components/ui/logo'
 import MainMenu from '@components/layout/main-menu'
 import Togglemenu from '@components/ui/toggle-menu'
@@ -15,6 +15,7 @@ export default function GlobalHeader() {
 
     //To hold states for our Toggle
     const [menuVisible, setMenuVisible] = useState(false)
+
     return (
         <header
             className={`${isHome ? `home global-header` : 'global-header'}`}
@@ -22,7 +23,10 @@ export default function GlobalHeader() {
         >
             <div className="global-header__container">
                 <Logo />
-                <MainMenu menuVisible={menuVisible} />
+                <MainMenu
+                    menuVisible={menuVisible}
+                    setMenuVisible={setMenuVisible}
+                />
                 <Togglemenu
                     menuVisible={menuVisible}
                     setMenuVisible={setMenuVisible}

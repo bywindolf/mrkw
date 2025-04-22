@@ -1,6 +1,6 @@
 @layer components {
     .work__list {
-        @apply grid-12 my-container;
+        @apply grid-12 my-container gap-y-20;
     }
     .work__item {
         @apply tablet:col-span-6 desktop:col-span-6 col-span-12;
@@ -10,13 +10,13 @@
         @apply pt-20;
     }
     .workinfo__container {
-        @apply grid-12 my-container h-[20rem];
+        @apply grid-12 my-container min-h-[20rem];
     }
     .workinfo__info {
-        @apply col-span-6 flex h-full flex-col justify-between;
+        @apply desktop:col-span-6 col-span-12 flex h-full flex-col justify-between gap-4;
     }
     .workinfo__description {
-        @apply col-span-6;
+        @apply desktop:col-span-6 col-span-12;
     }
     .workinfo .header__title {
         font-size: var(--step-4);
