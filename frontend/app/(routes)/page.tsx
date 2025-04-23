@@ -48,7 +48,6 @@ export default async function Home() {
     const page = pageSnap.docs[0].data()
     return (
         <Main>
-            Dev test
             {Array.isArray(page.content) &&
                 page.content.map((block: ContentBlock, index: number) => {
                     switch (block.type) {
