@@ -1,3 +1,5 @@
+![1745399467825](image/README/1745399467825.png)
+
 # Portfolio Project
 
 This is the final assignment for the **Frontend Developer** course. This project is a personal portfolio website built with Next.js, Tailwind CSS, and TypeScript, integrating FireCMS for content management and deployed.
