@@ -1,0 +1,40 @@
+@layer components {
+    body {
+        @apply desktop:pb-40;
+    }
+
+    section {
+    }
+
+    .main {
+        @apply px-body flex flex-col gap-20 pb-24 pt-20 align-middle;
+    }
+    .content {
+        @apply my-container;
+    }
+    .content__text {
+        @apply desktop:max-w-5xl mx-auto;
+    }
+    .rich-content {
+        @apply col-span-9 mx-auto flex flex-col gap-4;
+    }
+}
+
+/* Finally made a utility class! */
+
+@utility dev-color {
+    background-color: var(--dev-color);
+}
+
+@utility my-container {
+    @apply desktop:max-w-desktop gap-fluid mx-auto w-full;
+}
+@utility grid-12 {
+    @apply dev-color gap-fluid grid grid-cols-12;
+    > * {
+        background-color: var(--dev-color);
+    }
+}
+@utility fluid {
+    @apply -mx-body px-body;
+}

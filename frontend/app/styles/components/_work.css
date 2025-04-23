@@ -1,0 +1,24 @@
+@layer components {
+    .work__list {
+        @apply grid-12 my-container gap-y-20;
+    }
+    .work__item {
+        @apply tablet:col-span-6 desktop:col-span-6 col-span-12;
+    }
+
+    .workinfo {
+        @apply pt-20;
+    }
+    .workinfo__container {
+        @apply grid-12 my-container min-h-[20rem];
+    }
+    .workinfo__info {
+        @apply desktop:col-span-6 col-span-12 flex h-full flex-col justify-between gap-4;
+    }
+    .workinfo__description {
+        @apply desktop:col-span-6 col-span-12;
+    }
+    .workinfo .header__title {
+        font-size: var(--step-4);
+    }
+}
