@@ -15,12 +15,14 @@ export default async function Work({ isFeatured, colSpan = '' }: WorkProps) {
         isType: 'work',
     })
     return (
-        <ul className={`work__list${colSpan ? ` cols-${colSpan}` : ''}`}>
-            {items.map((item) => (
-                <li key={item.id} className={`work__item`}>
-                    <Card item={item as WorkItem} />
-                </li>
-            ))}
-        </ul>
+        <section className="work">
+            <ul className={`work__list${colSpan ? ` cols-${colSpan}` : ''}`}>
+                {items.map((item) => (
+                    <li key={item.id} className={`work__item`}>
+                        <Card item={item as WorkItem} />
+                    </li>
+                ))}
+            </ul>
+        </section>
     )
 }

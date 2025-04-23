@@ -1,6 +1,6 @@
 @layer components {
     .hero {
-        @apply desktop:aspect-[16/8] text-primary px-body flex flex-col items-center justify-center py-30;
+        @apply fluid desktop:aspect-[16/8] text-primary py-30 flex flex-col items-center justify-center;
     }
     .hero h1 {
         @apply text-[length:var(--step-7)] leading-none;

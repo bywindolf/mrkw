@@ -9,6 +9,8 @@ export type ContentBlock =
     | { type: 'text'; value: string }
     | { type: 'image'; value: string }
     | { type: 'hero'; value: { content: string; title: string } }
+    | { type: 'featuredWorks'; value: string }
+    | { type: 'experience'; value: string }
 
 export type WorkItem = {
     id?: number | string

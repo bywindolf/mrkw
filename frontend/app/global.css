@@ -91,6 +91,7 @@
         clamp(1.5rem, 0.7405rem + 3.7975vw, 4.5rem)
     );
     --gap-fluid: var(--grid-gutter); /* Utopia */
+    --margin-body: var(--grid-gutter);
     --padding-body: var(
         --grid-gutter
     ); /* Space l/r body

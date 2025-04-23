@@ -35,3 +35,6 @@
         background-color: var(--dev-color);
     }
 }
+@utility fluid {
+    @apply -mx-body px-body;
+}

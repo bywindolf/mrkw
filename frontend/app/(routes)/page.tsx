@@ -10,6 +10,8 @@ import Image from 'next/image'
 import { Markdown } from '@firecms/ui'
 import { ContentBlock } from '@/common/types'
 import Hero from '../components/sections/hero'
+import ExperienceComponent from '../components/sections/experience'
+
 export default async function Home() {
     const formattedSlug = 'home' // Or '' if you prefer
 
@@ -24,9 +26,28 @@ export default async function Home() {
         notFound()
     }
 
+    // const settingsSnap = await db
+    //     .collection('globals')
+    //     .doc('global-settings')
+    //     .get()
+
+    // if (!settingsSnap.exists) {
+    //     console.error('Global settings not found')
+    //     notFound()
+    // }
+    // const globalSettings = settingsSnap.data() as GlobalSettings
+    // console.log('Global settings:', globalSettings)
+
+    // type GlobalSettings = {
+    //     skills: string[]
+    //     siteTitle: string
+    //     tagline?: string
+    //     contactEmail?: string
+    //     // Add more fields as needed
+    // }
     const page = pageSnap.docs[0].data()
     return (
-        <>
+        <Main>
             {Array.isArray(page.content) &&
                 page.content.map((block: ContentBlock, index: number) => {
                     switch (block.type) {
@@ -70,12 +91,16 @@ export default async function Home() {
                                     ></Image>
                                 </section>
                             )
+                        case 'featuredWorks':
+                            return <FeaturedWorks key={index}></FeaturedWorks>
+                        case 'experience':
+                            return <ExperienceComponent key={index} />
                     }
                 })}
-
-            <Main>
-                <FeaturedWorks />
-            </Main>
-        </>
+            {/* {globalSettings.skills.map((skill: string, index: number) => (
+                <p>hej</p>
+            ))} */}
+            {/* <FeaturedWorks /> */}
+        </Main>
     )
 }
