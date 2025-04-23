@@ -1,0 +1,28 @@
+steps:
+    - name: 'gcr.io/cloud-builders/docker'
+      entrypoint: bash
+      args:
+          - -c
+          - |
+              echo "⚙️  Building CMS Docker Image..."
+              docker build -t gcr.io/$PROJECT_ID/my-cms .
+      dir: 'my-cms'
+
+    - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+      entrypoint: bash
+      args:
+          - -c
+          - |
+              echo "🚀 Deploying CMS to Cloud Run..."
+              gcloud run deploy my-cms \
+                --image gcr.io/$PROJECT_ID/my-cms \
+                --region europe-west1 \
+                --platform managed \
+                --allow-unauthenticated
+
+images:
+    - 'gcr.io/$PROJECT_ID/my-cms'
+
+timeout: 1200s
+options:
+    logging: CLOUD_LOGGING_ONLY

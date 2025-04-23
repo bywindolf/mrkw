@@ -1,0 +1,18 @@
+@layer components {
+    .hero {
+        @apply fluid desktop:aspect-[16/8] text-primary py-30 flex flex-col items-center justify-center;
+    }
+    .hero h1 {
+        @apply text-[length:var(--step-7)] leading-none;
+    }
+    .hero__container {
+        @apply my-container grid-12 justify-items-start gap-4;
+    }
+
+    .hero__title {
+        @apply desktop:col-span-8 tablet:col-span-10 col-span-12;
+    }
+    .hero__content {
+        @apply desktop:col-span-8 tablet:col-span-10 col-span-12;
+    }
+}

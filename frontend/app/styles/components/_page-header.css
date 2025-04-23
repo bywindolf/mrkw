@@ -1,0 +1,8 @@
+@layer components {
+    .page-header {
+        @apply pt-20 pb-10;
+    }
+    .page-header__container {
+        @apply my-container;
+    }
+}

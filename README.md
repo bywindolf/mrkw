@@ -1,14 +1,16 @@
 # Portfolio Project
 
-This is the final assignment for the **Frontend Developer React** course. This project is a personal portfolio website built with Next.js, Tailwind CSS, and TypeScript, integrating FireCMS for content management and deployed on Google Cloud.
+This is the final assignment for the **Frontend Developer** course. This project is a personal portfolio website built with Next.js, Tailwind CSS, and TypeScript, integrating FireCMS for content management and deployed.
+
+https://kristoffer.windolf.se
 
 ## Technologies Used
 
-- **Next.js (App Router)** – React framework for server-side rendering and API routes.
-- **Tailwind CSS** – Utility-first CSS framework for styling.
-- **TypeScript** – Static typing for maintainability.
-- **FireCMS** – Headless CMS for managing portfolio content.
-- **Google Cloud** – Hosting and deployment platform.
+- [x] **Next.js (App Router)** – React framework for server-side rendering and API routes.
+- [x] **Tailwind CSS** – Utility-first CSS framework for styling.
+- [x] **TypeScript** – Static typing for maintainability.
+- [x] **FireCMS** – Headless CMS for managing portfolio content.
+- [x] **Vercel and Google Cloud** – Hosting and deployment platform.
 
 ## Project Structure
 
@@ -27,5 +29,3 @@ The project is deployed on **Google Cloud**. The deployment workflow ensures:
 1. **Feature branches** → Merged into `dev `for staging.
 2. **Dev branch** → Merged into `main` for production.
 3. **CI/CD** automates the deployment process.
-
-##trigger####

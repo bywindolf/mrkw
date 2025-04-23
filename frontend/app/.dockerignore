@@ -1,0 +1,6 @@
+node_modules
+Dockerfile
+.dockerignore
+.env
+*.log
+# Leave out .next to allow builds!
